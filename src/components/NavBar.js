@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SingleCategory extends React.Component {
+class NavBar extends React.Component {
   render() {
     return(
       <div>Placeholder</div>
@@ -8,4 +8,4 @@ class SingleCategory extends React.Component {
   }
 }
 
-export default SingleCategory;
+export default NavBar;

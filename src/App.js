@@ -1,6 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Contact from './components/Contact';
+import MainCategories from './components/MainCategories';
+import NavBar from './components/NavBar';
+import SignIn from './components/SignIn';
+import SingleCategory from './components/SingleCategory';
+import UserProfile from './components/UserProfile';
+
+
 
 function App() {
   return (
