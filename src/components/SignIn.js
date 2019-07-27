@@ -41,6 +41,7 @@ class SignIn extends React.Component {
       });
   };
 
+<<<<<<< HEAD
   render() {
     return (
       <form>
@@ -83,3 +84,6 @@ class SignIn extends React.Component {
 }
 
 export default SignIn;
+=======
+export default SignIn;
+>>>>>>> 0092d034e56522ee2299ef7233287ca247e62991
