@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
 
-class NewUser extends from React.Component {
+class NewUser extends React.Component {
   render() {
-    return(
-      <div>Placeholder</div>
-    )
+    return <div>Placeholder for Registration Form</div>;
   }
 }
-
 export default NewUser;

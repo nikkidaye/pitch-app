@@ -1,20 +1,6 @@
-<<<<<<< HEAD
 import React from "react";
 import axios from "axios";
 import { Route, Link } from "react-router-dom";
-=======
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Contact from './components/Contact';
-import MainCategories from './components/MainCategories';
-import NavBar from './components/NavBar';
-import SignIn from './components/SignIn';
-import SingleCategory from './components/SingleCategory';
-import UserProfile from './components/UserProfile';
-
-
->>>>>>> 0092d034e56522ee2299ef7233287ca247e62991
 
 import Contact from "./components/Contact";
 import MainCategories from "./components/MainCategories";
@@ -22,6 +8,9 @@ import NewUser from "./components/NewUser";
 import SignIn from "./components/SignIn";
 import SingleCategory from "./components/SingleCategory";
 import UserProfile from "./components/UserProfile";
+import SearchResults from "./components/SearchResults";
+
+const API_KEY = "duywYDviRp03Bk2OT6ZrkE0Ccl3ODlUA";
 
 class App extends React.Component {
   constructor() {
@@ -62,12 +51,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        {/* <Contact />
+        <Contact />
         <MainCategories />
         <NewUser />
         <SignIn />
         <SingleCategory />
-        <UserProfile /> */}
+        <UserProfile />
+        <SearchResults />
       </div>
     );
   }
