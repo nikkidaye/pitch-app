@@ -30,6 +30,7 @@ class App extends React.Component {
   //   this.setState(userObject);
   // };
 
+
   // getUser = () => {
   //   axios.get("/user/").then(res => {
   //     console.log("Get User response: ");
@@ -49,6 +50,7 @@ class App extends React.Component {
   //     }
   //   });
   // };
+  
   render() {
     return (
       <div className="App">

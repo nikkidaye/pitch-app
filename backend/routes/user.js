@@ -28,6 +28,7 @@ const passport = require("../passport");
 //   });
 // });
 
+
 // router.post(
 //   "/login",
 //   function(req, res, next) {
@@ -44,7 +45,6 @@ const passport = require("../passport");
 //     res.send(userInfo);
 //   }
 // );
-
 // router.get("/", (req, res, next) => {
 //   console.log("===== user!!======");
 //   console.log(req.user);
