@@ -8,8 +8,7 @@ class SearchResults extends React.Component {
   };
 
   handleClick = async () => {
-    const { data } = await axios.get(
-      "https://api.giphy.com/v1/gifs/search?api_key=duywYDviRp03Bk2OT6ZrkE0Ccl3ODlUA&q=confidence&limit=25&offset=0&rating=PG&lang=en"
+    const { data } = await axios.get("https://api.giphy.com/v1/gifs/search?api_key=duywYDviRp03Bk2OT6ZrkE0Ccl3ODlUA&q=confidence&limit=25&offset=0&rating=PG&lang=en"
     );
     this.setState({ data: data.data });
     console.log(data);
@@ -20,18 +19,18 @@ class SearchResults extends React.Component {
 
     return (
       <div>
-        <h1 onClick={this.handleClick}>Confidence Booster</h1>
-        <div className={styles.searchResults}>
-          {data.map(gif => {
+        <h1 onClick={this.handleClick} >Confidence Booster</h1>
+  <div className={styles.searchResults} >
+          {data.map((gif, index) => {
             return (
-              <div className={styles.gif}>
+              <div className={styles.gif} key={index}>
                 <video controls loop autoPlay>
                   <source
                     src={gif.images.downsized_small.mp4}
                     type="video/mp4"
                   />
                 </video>
-                <button>Add to Favorites</button>
+                <button onClick={this.handleClick} type="submit">Add to Favorites</button>
               </div>
             );
           })}

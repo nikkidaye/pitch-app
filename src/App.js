@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+// import axios from "axios";
 import { Route } from "react-router-dom";
 
 import Contact from "./components/Contact";
@@ -22,33 +22,35 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount = () => {
-    this.getUser();
-  };
+  // componentDidMount = () => {
+  //   this.getUser();
+  // };
 
-  updateUser = userObject => {
-    this.setState(userObject);
-  };
+  // updateUser = userObject => {
+  //   this.setState(userObject);
+  // };
 
-  getUser = () => {
-    axios.get("http://localhost:4000/user/").then(res => {
-      console.log("Get User response: ");
-      console.log(res.data);
-      if (res.data.user) {
-        console.log("Get User: There is a user saved in server: ");
-        this.setState({
-          loggedIn: true,
-          email: res.data.user.email
-        });
-      } else {
-        console.log("Get User: no user");
-        this.setState({
-          loggedIn: false,
-          email: null
-        });
-      }
-    });
-  };
+
+  // getUser = () => {
+  //   axios.get("/user/").then(res => {
+  //     console.log("Get User response: ");
+  //     console.log(res.data);
+  //     if (res.data.user) {
+  //       console.log("Get User: There is a user saved in server: ");
+  //       this.setState({
+  //         loggedIn: true,
+  //         email: res.data.user.email
+  //       });
+  //     } else {
+  //       console.log("Get User: no user");
+  //       this.setState({
+  //         loggedIn: false,
+  //         email: null
+  //       });
+  //     }
+  //   });
+  // };
+  
   render() {
     return (
       <div className="App">
