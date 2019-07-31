@@ -21,9 +21,9 @@ class SearchResults extends React.Component {
       <div>
         <h1 onClick={this.handleClick} >Confidence Booster</h1>
   <div className={styles.searchResults} >
-          {data.map(gif => {
+          {data.map((gif, index) => {
             return (
-              <div className={styles.gif}>
+              <div className={styles.gif} key={index}>
                 <video controls loop autoPlay>
                   <source
                     src={gif.images.downsized_small.mp4}
