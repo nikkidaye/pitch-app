@@ -31,7 +31,7 @@ class SearchResults extends React.Component {
                     type="video/mp4"
                   />
                 </video>
-                <button>Add to Favorites</button>
+                <button onClick={this.handleClick} type="submit">Add to Favorites</button>
               </div>
             );
           })}
