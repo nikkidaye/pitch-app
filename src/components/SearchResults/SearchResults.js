@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "./SearchResults.module.css";
-
+import styles from "./SearchResults.css";
 const axios = require("axios");
 
 class SearchResults extends React.Component {
