@@ -3,30 +3,6 @@ const router = express.Router();
 // const User = require("../database/models/user");
 // const passport = require("../passport");
 
-router.get("/", (req, res) => {
-  console.log("user signup");
-
-  const { email, password } = req.body;
-
-  User.findOne({ email: email }, (err, user) => {
-    if (err) {
-      console.log("User.js post error: ", err);
-    } else if (user) {
-      res.json({
-        error: `Sorry, this email already exists: ${email}`
-      });
-    } else {
-      const newUser = new User({
-        email: email,
-        password: password
-      });
-      newUser.save((err, savedUser) => {
-        if (err) return res.json(err);
-        res.json(savedUser);
-      });
-    }
-  });
-});
 
 
 // router.post(
