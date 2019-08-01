@@ -17,8 +17,11 @@ router.get("/", (req, res) => {
       });
     } else {
       const newUser = new User({
+        firstName: firstName,
+        lastName: lastName,
         email: email,
         password: password
+
       });
       newUser.save((err, savedUser) => {
         if (err) return res.json(err);
