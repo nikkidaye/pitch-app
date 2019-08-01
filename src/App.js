@@ -22,34 +22,34 @@ class App extends React.Component {
     };
   }
 
-  // componentDidMount = () => {
-  //   this.getUser();
-  // };
+  componentDidMount = () => {
+    this.getUser();
+  };
 
-  // updateUser = userObject => {
-  //   this.setState(userObject);
-  // };
+  updateUser = userObject => {
+    this.setState(userObject);
+  };
 
+  getUser = () => {
+    axios.get("/user/").then(response => {
+      console.log("Get User response: ");
+      console.log(response.data);
+      if (response.data.user) {
+        console.log("Get User: There is a user saved in server: ");
+        this.setState({
+          loggedIn: true,
+          email: res.data.user.email
+        });
+      } else {
+        console.log("Get user: no user");
+        this.setState({
+          loggedIn: false,
+          email: null
+        });
+      }
+    });
+  };
 
-  // getUser = () => {
-  //   axios.get("/user/").then(res => {
-  //     console.log("Get User response: ");
-  //     console.log(res.data);
-  //     if (res.data.user) {
-  //       console.log("Get User: There is a user saved in server: ");
-  //       this.setState({
-  //         loggedIn: true,
-  //         email: res.data.user.email
-  //       });
-  //     } else {
-  //       console.log("Get User: no user");
-  //       this.setState({
-  //         loggedIn: false,
-  //         email: null
-  //       });
-  //     }
-  //   });
-  // };
 
   render() {
     return (
@@ -58,14 +58,16 @@ class App extends React.Component {
         {this.state.loggedIn && <p>Welcome, {this.state.email}!</p>}
         <Route exact path="/" component={Home} />
         <Route
-          path="/login"
+          path="/signin"
           render={() => <SignIn updateUser={this.updateUser} />}
         />
+
         <Route path="/signup" component={NewUser} />
         <Route path="/selected" component={SingleCategory} />
         <Route path="/profile/:id" component={UserProfile} />
         <Route path="/main" component={SearchResults} />
         <Route path="/contact" component={Contact} />
+
       </div>
     );
   }
