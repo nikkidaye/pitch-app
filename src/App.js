@@ -50,6 +50,7 @@ class App extends React.Component {
     });
   };
 
+
   render() {
     return (
       <div className="App">
@@ -60,11 +61,13 @@ class App extends React.Component {
           path="/signin"
           render={() => <SignIn updateUser={this.updateUser} />}
         />
-        <Route path="/newuser" render={() => <NewUser />} />
-        <Route path="/selected" render={() => <SingleCategory />} />
-        <Route path="/profile/:id" render={() => <UserProfile />} />
-        <Route path="/main" render={() => <SearchResults />} />
-        <Route path="/contact" render={() => <Contact />} />
+
+        <Route path="/signup" component={NewUser} />
+        <Route path="/selected" component={SingleCategory} />
+        <Route path="/profile/:id" component={UserProfile} />
+        <Route path="/main" component={SearchResults} />
+        <Route path="/contact" component={Contact} />
+
       </div>
     );
   }
