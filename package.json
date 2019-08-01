@@ -52,5 +52,6 @@
   "bugs": {
     "url": "https://github.com/nikkidaye/pitch-app/issues"
   },
-  "homepage": "https://github.com/nikkidaye/pitch-app#readme"
+  "homepage": "https://github.com/nikkidaye/pitch-app#readme",
+  "keywords": []
 }
