@@ -1,5 +1,5 @@
 import React from "react";
-// import axios from "axios";
+import axios from "axios";
 import { Route } from "react-router-dom";
 
 import Contact from "./components/Contact";
@@ -38,7 +38,7 @@ class App extends React.Component {
         console.log("Get User: There is a user saved in server: ");
         this.setState({
           loggedIn: true,
-          email: res.data.user.email
+          email: response.data.user.email
         });
       } else {
         console.log("Get user: no user");
@@ -60,11 +60,11 @@ class App extends React.Component {
           path="/signin"
           render={() => <SignIn updateUser={this.updateUser} />}
         />
-        <Route path="/newuser" render={() => <NewUser />} />
-        <Route path="/selected" render={() => <SingleCategory />} />
-        <Route path="/profile/:id" render={() => <UserProfile />} />
-        <Route path="/main" render={() => <SearchResults />} />
-        <Route path="/contact" render={() => <Contact />} />
+        <Route path="/newuser" component={NewUser} />
+        <Route path="/selected" component={SingleCategory} />
+        <Route path="/profile/:id" component={UserProfile} />
+        <Route path="/main" component={SearchResults} />
+        <Route path="/contact" component={Contact} />
       </div>
     );
   }
