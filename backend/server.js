@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+
 const user = require("./routes/user");
 const port = process.env.Port || 5000;
 const session = require('express-session');
@@ -9,6 +10,7 @@ const MongoStore = require('connect-mongo')(session)
 // const passport = require('./passport');
 const app = express()
 const mongoose = require('mongoose');
+
 const PORT = 8080;
 require('dotenv').config();
 
@@ -21,8 +23,6 @@ mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex:true }).then(
     console.log("Error")
   }
 )
-
-
 
 // MIDDLEWARE
 app.use(
@@ -49,6 +49,7 @@ app.use(bodyParser.json())
 
 // Routes
 app.use('/user', user)
+
 
 // Starting Server
 app.listen(PORT, () => {

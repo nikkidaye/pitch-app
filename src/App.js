@@ -57,12 +57,17 @@ class App extends React.Component {
         <NavBar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
         <Route exact path="/" component={NewUser} />
         <Route
+          path="/signin"
+          render={() => <SignIn updateUser={this.updateUser} />}
+        />
+        <Route path="/newuser" component={NewUser} />
+
           path="/signin" component={SignIn} />}
+
         <Route path="/selected" component={SingleCategory} />
         <Route path="/profile/:id" component={UserProfile} />
         <Route path="/main" component={SearchResults} />
         <Route path="/contact" component={Contact} />
-
       </div>
     );
   }
