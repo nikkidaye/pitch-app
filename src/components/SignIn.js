@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import axios from "axios";
 import React from 'react';
@@ -16,17 +15,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-function MadeWithLove() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {''}
-      <Link color="inherit" href="https://material-ui.com/">
-
-      </Link>
-      {''}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -55,20 +43,32 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SignIn() {
-  const classes = useStyles();
+class SignIn extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      redirectTo: null
+    };
+  }
+
+  render() {
 
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
+      <div className={useStyles.paper}>
+        <Avatar className={useStyles.avatar}>
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={useStyles.form} noValidate>
           <TextField
             variant="outlined"
             margin="normal"
@@ -100,7 +100,7 @@ export default function SignIn() {
             fullWidth
             variant="contained"
             color="primary"
-            className={classes.submit}
+            className={useStyles.submit}
           >
             Sign In
           </Button>
@@ -119,116 +119,115 @@ export default function SignIn() {
         </form>
       </div>
       <Box mt={5}>
-        <MadeWithLove />
       </Box>
     </Container>
-  );
+  )};
 }
 
 
-class SignIn extends Component {
-  constructor() {
-    super();
-    this.state = {
-      email: "",
-      password: "",
-      redirectTo: null
-    };
-  }
-
-  handleChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
-
-  handleSubmit = event => {
-    event.preventDefault();
-    console.log("handleSubmit");
-
-    axios
-      .post("/user/signin", {
-        username: this.state.email,
-        password: this.state.password
-      })
-      .then(response => {
-        console.log("signin response: ");
-        console.log(response);
-        if (response.status === 200) {
-          this.props.updateUser({
-            loggedIn: true,
-            username: response.data.username
-          });
-
-          this.setState({
-            redirectTo: "/"
-          });
-        }
-      })
-      .catch(error => {
-        console.log("login error: ");
-        console.log(error);
-      });
-  };
-
-  render() {
-    if (this.state.redirectTo) {
-      return <Redirect to={{ pathname: this.state.redirectTo }} />;
-    } else {
-      return (
-        <div>
-          <h4>Login</h4>
-          <form className="form-horizontal">
-            <div className="form-group">
-              <div className="col-1 col-ml-auto">
-                <label className="form-label" htmlFor="email">
-                  Username
-                </label>
-              </div>
-              <div className="col-3 col-mr-auto">
-                <input
-                  className="form-input"
-                  type="text"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                />
-              </div>
-            </div>
-            <div className="form-group">
-              <div className="col-1 col-ml-auto">
-                <label className="form-label" htmlFor="password">
-                  Password:{" "}
-                </label>
-              </div>
-              <div className="col-3 col-mr-auto">
-                <input
-                  className="form-input"
-                  placeholder="password"
-                  type="password"
-                  name="password"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                />
-              </div>
-            </div>
-            <div className="form-group ">
-              <div className="col-7" />
-              <button
-                className="btn btn-primary col-1 col-mr-auto"
-                onClick={this.handleSubmit}
-                type="submit"
-              >
-                Login
-              </button>
-            </div>
-          </form>
-        </div>
-      );
-    }
-  }
-}
+// class SignIn extends Component {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     email: "",
+  //     password: "",
+  //     redirectTo: null
+  //   };
+  // }
+//
+//   handleChange = event => {
+//     this.setState({
+//       [event.target.name]: event.target.value
+//     });
+//   };
+//
+//   handleSubmit = event => {
+//     event.preventDefault();
+//     console.log("handleSubmit");
+//
+//     axios
+//       .post("/user/signin", {
+//         username: this.state.email,
+//         password: this.state.password
+//       })
+//       .then(response => {
+//         console.log("signin response: ");
+//         console.log(response);
+//         if (response.status === 200) {
+//           this.props.updateUser({
+//             loggedIn: true,
+//             username: response.data.username
+//           });
+//
+//           this.setState({
+//             redirectTo: "/"
+//           });
+//         }
+//       })
+//       .catch(error => {
+//         console.log("login error: ");
+//         console.log(error);
+//       });
+//   };
+//
+//   render() {
+//     if (this.state.redirectTo) {
+//       return <Redirect to={{ pathname: this.state.redirectTo }} />;
+//     } else {
+//       return (
+//         <div>
+//           <h4>Login</h4>
+//           <form className="form-horizontal">
+//             <div className="form-group">
+//               <div className="col-1 col-ml-auto">
+//                 <label className="form-label" htmlFor="email">
+//                   Username
+//                 </label>
+//               </div>
+//               <div className="col-3 col-mr-auto">
+//                 <input
+//                   className="form-input"
+//                   type="text"
+//                   id="email"
+//                   name="email"
+//                   placeholder="Email"
+//                   value={this.state.email}
+//                   onChange={this.handleChange}
+//                 />
+//               </div>
+//             </div>
+//             <div className="form-group">
+//               <div className="col-1 col-ml-auto">
+//                 <label className="form-label" htmlFor="password">
+//                   Password:{" "}
+//                 </label>
+//               </div>
+//               <div className="col-3 col-mr-auto">
+//                 <input
+//                   className="form-input"
+//                   placeholder="password"
+//                   type="password"
+//                   name="password"
+//                   value={this.state.password}
+//                   onChange={this.handleChange}
+//                 />
+//               </div>
+//             </div>
+//             <div className="form-group ">
+//               <div className="col-7" />
+//               <button
+//                 className="btn btn-primary col-1 col-mr-auto"
+//                 onClick={this.handleSubmit}
+//                 type="submit"
+//               >
+//                 Login
+//               </button>
+//             </div>
+//           </form>
+//         </div>
+//       );
+//     }
+//   }
+// }
 
 export default SignIn;
