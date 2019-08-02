@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-
+import axios from 'axios';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -51,6 +51,38 @@ class NewUser extends React.Component {
 		}
 	}
 
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    console.log('this is working')
+
+    axios.post("/user").then(response => {
+
+      console.log("Create User response: ");
+      console.log(response.data);
+      if (response.data.user) {
+        console.log("Get User: There is a user saved in server: ");
+        this.setState({
+          loggedIn: true,
+          email: response.data.user.email
+        });
+      } else {
+        console.log("Get user: no user");
+        this.setState({
+          loggedIn: false,
+          email: null
+        });
+      }
+    });
+  }
+
+
 
 	render() {
 
@@ -75,6 +107,7 @@ class NewUser extends React.Component {
 	                fullWidth
 	                id="firstName"
 	                label="First Name"
+                  onChange={this.handleChange}
 	                autoFocus
 	              />
 	            </Grid>
@@ -85,6 +118,7 @@ class NewUser extends React.Component {
 	                fullWidth
 	                id="lastName"
 	                label="Last Name"
+                  onChange={this.handleChange}
 	                name="lastName"
 	                autoComplete="lname"
 	              />
@@ -97,6 +131,7 @@ class NewUser extends React.Component {
 	                id="email"
 	                label="Email Address"
 	                name="email"
+                  onChange={this.handleChange}
 	                autoComplete="email"
 	              />
 	            </Grid>
@@ -109,6 +144,7 @@ class NewUser extends React.Component {
 	                label="Password"
 	                type="password"
 	                id="password"
+                  onChange={this.handleChange}
 	                autoComplete="current-password"
 	              />
 	            </Grid>
@@ -119,6 +155,7 @@ class NewUser extends React.Component {
 	            variant="contained"
 	            color="primary"
 	            className={useStyles.submit}
+              onClick={this.handleSubmit}
 	          >
 	            Sign Up
 	          </Button>
@@ -154,15 +191,8 @@ export default NewUser;
 // 		this.handleSubmit = this.handleSubmit.bind(this)
 // 		this.handleChange = this.handleChange.bind(this)
 // 	}
-// 	handleChange = (event) => {
-// 		this.setState({
-// 			[event.target.name]: event.target.value
-// 		})
-// 	}
-// 	handleSubmit = (event) => {
-// 		console.log('sign-up handleSubmit, username: ')
-// 		console.log(this.state.username)
-// 		event.preventDefault()
+
+//
 //
 // 		//request to server to add a new username/password
 // 		axios.post('/user/', {
