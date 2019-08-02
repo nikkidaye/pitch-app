@@ -3,7 +3,7 @@ import React from 'react';
 class NavBar extends React.Component {
   render() {
     return(
-      <div>Placeholder</div>
+      <div>Nav Bar</div>
     )
   }
 }
