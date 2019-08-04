@@ -2,14 +2,14 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const bcrypt = require('bcryptjs');
 mongoose.promise = Promise
+
 // Define userSchema
 const userSchema = new Schema({
 
-
-  firstName: {type: String},
-  lastName: {type: String},
+	firstName: { type: String },
+	lastName: { type: String },
   email: { type: String },
-	password: { type: String }
+  password: { type: String }
 
 })
 

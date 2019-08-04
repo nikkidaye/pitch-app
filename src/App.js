@@ -22,7 +22,6 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-    this.getUser();
   };
 
   updateUser = userObject => {
@@ -51,6 +50,7 @@ class App extends React.Component {
   // state = {
   //   messages: []
   // };
+
 
   // handleNewMessage = (text) => {
   //   this.setState({
