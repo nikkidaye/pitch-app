@@ -1,20 +1,20 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../database/model/user");
+// const User = require("../database/models/user");
 // const passport = require("../passport");
 
-router.post("/", (req, res) => {
-  console.log("i'm creating a new user");
+router.get("/", (req, res) => {
+  console.log("user signup");
 
-  const firstName = req.body.firstName;
-  console.log(firstName)
-  const lastName = req.body.lastName;
-  const email = req.body.email;
-  const password = req.body.password;
+  const { email, password } = req.body;
 
   User.findOne({ email: email }, (err, user) => {
     if (err) {
       console.log("User.js post error: ", err);
+    } else if (user) {
+      res.json({
+        error: `Sorry, this email already exists: ${email}`
+      });
     } else {
       const newUser = new User({
         firstName: firstName,
@@ -23,7 +23,6 @@ router.post("/", (req, res) => {
         password: password
 
       });
-      console.log(newUser);
       newUser.save((err, savedUser) => {
         if (err) return res.json(err);
         res.json(savedUser);
