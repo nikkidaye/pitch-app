@@ -51,10 +51,40 @@ class SignIn extends React.Component {
       firstName: "",
       lastName: "",
       email: "",
-      password: "",
-      redirectTo: null
+      password: ""
     };
   }
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log("handleSubmit");
+
+    axios
+      .post("/user/signin", {
+        username: this.state.email,
+        password: this.state.password
+      })
+      .then(response => {
+        console.log("signin response: ");
+        console.log(response);
+        if (response.status === 200) {
+          this.props.updateUser({
+            loggedIn: true,
+            username: response.data.username
+          });
+        }
+      })
+      .catch(error => {
+        console.log("login error: ");
+        console.log(error);
+      });
+  };
 
   render() {
 
@@ -106,12 +136,9 @@ class SignIn extends React.Component {
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="/newuser" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
@@ -135,40 +162,6 @@ class SignIn extends React.Component {
   //   };
   // }
 //
-//   handleChange = event => {
-//     this.setState({
-//       [event.target.name]: event.target.value
-//     });
-//   };
-//
-//   handleSubmit = event => {
-//     event.preventDefault();
-//     console.log("handleSubmit");
-//
-//     axios
-//       .post("/user/signin", {
-//         username: this.state.email,
-//         password: this.state.password
-//       })
-//       .then(response => {
-//         console.log("signin response: ");
-//         console.log(response);
-//         if (response.status === 200) {
-//           this.props.updateUser({
-//             loggedIn: true,
-//             username: response.data.username
-//           });
-//
-//           this.setState({
-//             redirectTo: "/"
-//           });
-//         }
-//       })
-//       .catch(error => {
-//         console.log("login error: ");
-//         console.log(error);
-//       });
-//   };
 //
 //   render() {
 //     if (this.state.redirectTo) {
