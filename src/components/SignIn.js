@@ -138,6 +138,7 @@ class SignIn extends React.Component {
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
+          </Grid>
           </form>
         </div>
         <Box mt={5} />
