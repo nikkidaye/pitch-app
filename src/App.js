@@ -23,32 +23,12 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-    this.getUser();
   };
 
   updateUser = userObject => {
     this.setState(userObject);
   };
 
-  getUser = () => {
-    axios.get("/user").then(response => {
-      console.log("Get User response: ");
-      console.log(response.data);
-      if (response.data.user) {
-        console.log("Get User: There is a user saved in server: ");
-        this.setState({
-          loggedIn: true,
-          email: response.data.user.email
-        });
-      } else {
-        console.log("Get user: no user");
-        this.setState({
-          loggedIn: false,
-          email: null
-        });
-      }
-    });
-  };
 
 
   render() {
