@@ -1,13 +1,28 @@
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const dbConnection = require('./database')
+const bodyParser = require("body-parser");
+const user = require("./routes/user");
+const session = require('express-session');
+const dbConnection = require('./database/index');
 const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
 const app = express()
 const PORT = 8080
-// Route requires
-const user = require('./routes/user')
+const mongoose = require('mongoose');
+require('dotenv').config();
+
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex:true }).then(
+  () => {
+    console.log("Connected to Mongo");
+  },
+  err => {
+    console.log("Error")
+  }
+)
 
 // MIDDLEWARE
 app.use(
@@ -34,6 +49,7 @@ app.use(passport.session()) // calls the deserializeUser
 
 // Routes
 app.use('/user', user)
+
 
 // Starting Server
 app.listen(PORT, () => {
