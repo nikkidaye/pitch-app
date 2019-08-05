@@ -7,7 +7,13 @@ import '../App.css';
 import Video from '../sunset.mp4'
 import {deepPurple} from '@material-ui/core/colors';
 
+
 class Contact extends React.Component {
+  // onSubmit = () => {
+  //   alert("Thank you for your message. You will receive a response within 24-48 hours. For immediate assistance or if someone you know is in danger please call 911") 
+  // }
+  myClick = () => {alert("Thank you for your message, we will respond within 24-48 hours.")}
+ 
   render() {
     return (
       <div
@@ -42,9 +48,11 @@ class Contact extends React.Component {
             <Input id="email" multiline rows={10} />
           </FormControl>
 
-          <Button variant="contained" color="primary" size="medium">
+          <Button  onClick={this.myClick} type="submit" href="/main" variant="contained" color="primary" size="medium">
             Send
           </Button>
+
+      
         </form>
 
 
