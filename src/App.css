@@ -1,27 +1,36 @@
 .App {
   text-align: center;
+
 }
-*background-video{
 
-    height: 100%;
+
+
+}
+*background-video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
+/* background-video{ height: height,
+position: "absolute",
+top: 0,
+left: 0,
+alignItems: "stretch",
+bottom: 0,
+right: 0
+}
+} */
 
-  video {
-    /* The image used */
-    background-image: url("http://video2.ignitemotion.com/files/mp4/Looping_Clouds.mp4");
-
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-/* #background-image:  */
-Typography {
-  h1: font-family: 'Indie Flower', cursive;
-
+  box {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 TextField {
