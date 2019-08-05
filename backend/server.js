@@ -10,13 +10,6 @@ const PORT = 8080;
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const Twilio = require("twilio");
-const Chance = require("chance");
-
-const AccessToken = Twilio.jwt.AccessToken;
-const ChatGrant = AccessToken.ChatGrant;
-const chance = new Chance();
-
 mongoose
   .connect("mongodb://localhost:27017/users", {
     useNewUrlParser: true,
@@ -30,26 +23,6 @@ mongoose
       console.log("Error");
     }
   );
-
-app.get("/token/:id", function(req, res) {
-  const token = new AccessToken(
-    process.env.TWILIO_ACCOUNT_SID,
-    process.env.TWILIO_API_KEY,
-    process.env.TWILIO_API_SECRET
-  );
-
-  token.identity = chance.name();
-  token.addGrant(
-    new ChatGrant({
-      serviceSid: process.env.TWILIO_CHAT_SERVICE_SID
-    })
-  );
-
-  res.send({
-    identity: token.identity,
-    jwt: token.toJwt()
-  });
-});
 
 // MIDDLEWARE
 app.use(

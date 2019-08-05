@@ -3,8 +3,12 @@ import styles from "./SearchResults.css";
 import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
+
+import Chat from '../Chat';
+
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
+
 const axios = require("axios");
 
 const images = [
