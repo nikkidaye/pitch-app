@@ -2,14 +2,17 @@ import React from "react";
 import { FormControl, InputLabel, Input, Button } from "@material-ui/core";
 import { cyan } from '@material-ui/core/colors';
 import {deepOrange} from '@material-ui/core/colors';
-
+import '../App.css';
+import Video from '../sunset.mp4'
 
 class Contact extends React.Component {
   render() {
-    return (      
+    return (
       <div
         style={{
 
+
+          
           backgroundColor: deepOrange.A400,
           // primary:
           // secondary: //#ef5350
@@ -41,14 +44,7 @@ class Contact extends React.Component {
             Send
           </Button>
         </form>
-        <video autoPlay id="background-video" controls loop autoPlay>
-          // <source controls loop autoPlay src="https://www.youtube.com/watch?v=GOFtYeo64JE&feature=youtu.be" type="link"></source>
-          <source controls loop autoPlay src="http://video2.ignitemotion.com/files/mp4/Looping_Clouds.mp4" type="video/mp4"></source>
-          <source controls loop autoPlay src="flying_through_clouds.mov" type="mov" ></source>
 
-
-          Your browser does not support the video tag.
-        </video>
 
 
       </div>

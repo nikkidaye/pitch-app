@@ -12,10 +12,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Redirect } from 'react-router-dom';
 import {cyan} from '@material-ui/core/colors';
+import { positions } from '@material-ui/system';
+import '../App.css';
+import Video from '../sunset.mp4'
 
 const useStyles = makeStyles(theme => ({
   paper: {
-    backgroundColor: cyan[400], //#ef5350
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
@@ -33,6 +35,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(3, 0, 2),
   },
 }));
+
 
 class NewUser extends React.Component {
 
@@ -85,9 +88,14 @@ class NewUser extends React.Component {
 	render() {
 
 	  return (
-	    <Container component="main" maxWidth="xs">
+      <div>
+        <video id="video-bg" autoPlay loop muted>
+          <source id={useStyles.clouds} src= { Video } type="video/mp4"></source>
+          Your browser does not support the video tag.
+        </video>
+	    <Container component="main" maxWidth="xs" id="position">
 	      <CssBaseline />
-	      <div className={useStyles.paper}>
+	      <div className={useStyles.paper} id="position">
 	        <Avatar className={useStyles.avatar}>
 	          <LockOutlinedIcon />
 	        </Avatar>
@@ -167,6 +175,7 @@ class NewUser extends React.Component {
 	      </div>
       </div>
 	    </Container>
+    </div>
 	  )};
 }
 
