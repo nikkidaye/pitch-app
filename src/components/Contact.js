@@ -1,5 +1,9 @@
 import React from "react";
 import { FormControl, InputLabel, Input, Button } from "@material-ui/core";
+import { cyan } from '@material-ui/core/colors';
+import {deepOrange} from '@material-ui/core/colors';
+import '../App.css';
+import Video from '../sunset.mp4'
 
 
 class Contact extends React.Component {
@@ -12,6 +16,12 @@ class Contact extends React.Component {
     return (
       <div
         style={{
+
+
+          
+          backgroundColor: deepOrange.A400,
+          // primary:
+          // secondary: //#ef5350
           display: "flex",
           justifyContent: "center",
           margin: 20,
@@ -42,6 +52,9 @@ class Contact extends React.Component {
 
       
         </form>
+
+
+
       </div>
     );
   }

@@ -82,12 +82,13 @@ class SignIn extends React.Component {
   //     });
   // };
 
-  // render() {
-  //   return (
-  //     <Container component="main" maxWidth="xs">
-  //     </Container>
-  //   );
-  // }
+  render() {
+    return (
+      <Container component="main" maxWidth="xs">
+
+      </Container>
+    );
+  }
 }
 
 export default SignIn;
