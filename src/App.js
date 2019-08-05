@@ -6,9 +6,7 @@ import SignIn from "./components/SignIn";
 import SearchResults from "./components/SearchResults/SearchResults";
 import NavBar from "./components/NavBar";
 import NewUser from "./components/NewUser";
-import Message from "./components/Chat/Message";
-import MessageForm from "./components/Chat/MessageForm";
-import MessageList from "./components/Chat/MessageList";
+import Chat from "./components/Chat/Chat";
 
 // const API_KEY = "duywYDviRp03Bk2OT6ZrkE0Ccl3ODlUA";
 
@@ -20,9 +18,6 @@ class App extends React.Component {
       email: null
     };
   }
-
-  componentDidMount = () => {
-  };
 
   updateUser = userObject => {
     this.setState(userObject);
@@ -47,23 +42,11 @@ class App extends React.Component {
       }
     });
   };
-  // state = {
-  //   messages: []
-  // };
-
-
-  // handleNewMessage = (text) => {
-  //   this.setState({
-  //     messages: [...this.state.messages, { me: true, author: "Me", body: text }],
-  //   });
-  // }
   render() {
     return (
       <div className="App">
-        <NavBar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-        <MessageList messages={this.state.messages} />
-        <MessageForm onMessageSend={this.handleNewMessage} />
-        <Message />
+        <NavBar />
+        <Chat />
         <Route exact path="/" component={NewUser} />
         <Route
           path="/signin"
