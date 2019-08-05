@@ -10,12 +10,7 @@ import Chat from "./components/Chat/Chat";
 
 // const API_KEY = "duywYDviRp03Bk2OT6ZrkE0Ccl3ODlUA";
 
-// Background video
 
-// <video autoplay muted loop id="myVideo">
-//   <source src="looping_clouds.mp4" type="video/mp4"></source>
-// </video>
-//
 
 
 
@@ -66,13 +61,6 @@ class App extends React.Component {
         <Route path="/newuser" component={NewUser} />
         <Route path="/main" component={SearchResults} />
         <Route path="/contact" component={Contact} />
-        <video autoPlay id="background-video" controls loop autoPlay>
-          // <source controls loop autoPlay src="https://www.youtube.com/watch?v=GOFtYeo64JE&feature=youtu.be" type="link"></source>
-          <source controls loop autoPlay src="http://video2.ignitemotion.com/files/mp4/Looping_Clouds.mp4" type="video/mp4"></source>
-          <source controls loop autoPlay src="flying_through_clouds.mov" type="mov" ></source>
-
-          Your browser does not support the video tag.
-        </video>
       </div>
     );
   }
