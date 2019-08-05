@@ -3,6 +3,28 @@
 
 }
 
+#NavBar {
+  background-color: black;
+  font-style: italic;
+  font: Libre Caslon Text;
+  font-weight: bold;
+  font-size: 25pt;
+  font-family: 'Libre Caslon Text', serif;
+
+}
+#welcome {
+ font-family: 'Satisfy', cursive;
+  font: Satisfy;
+  display: inline-inline-block;
+  font-size: 60pt;
+  color: white;
+
+}
+
+#openbutt {
+  background-color: white;
+}
+
 #video-bg {
   z-index: -100;
   margin: 0;
@@ -15,10 +37,23 @@
   align-items: center;
 }
 
+.button {
+  background-color: white;
+}
+.paper{
+  font-family: Monospace,Lucida-Console;
+  opacity: 100%;
+}
+
 #position {
   position: relative;
   z-index: 100;
 
+}
+
+#makemewhite {
+  border-color: white;
+  color:white;
 }
 
   box {
@@ -31,10 +66,6 @@
 }
 
 TextField {
-  color: purple;
+  color: #900C3F;
 font: <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-}
-
-Button {
-  color: yellow;
 }
