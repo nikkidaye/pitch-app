@@ -10,11 +10,13 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+
 import { Redirect } from 'react-router-dom';
 import {cyan} from '@material-ui/core/colors';
 import { positions } from '@material-ui/system';
 import '../App.css';
 import Video from '../sunset.mp4'
+
 
 const useStyles = makeStyles(theme => ({
   paper: {

@@ -1,16 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import "./MessageForm.css";
 
-class MessageForm extends Component {
+class MessageForm extends React.Component {
   static propTypes = {
     onMessageSend: PropTypes.func.isRequired
   };
+
   componentDidMount = () => {
     this.input.focus();
   };
 
-  handleFormSubmit = event => {
+  onMessageSend = event => {
     event.preventDefault();
     this.props.onMessageSend(this.input.value);
     this.input.value = "";
@@ -27,7 +28,7 @@ class MessageForm extends Component {
           />
         </div>
         <div className="button-container">
-          <button type="submit">Send</button>
+          <button type="submit">Send </button>
         </div>
       </form>
     );
