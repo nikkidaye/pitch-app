@@ -6,6 +6,7 @@ import SignIn from "./components/SignIn";
 import SearchResults from "./components/SearchResults/SearchResults";
 import NavBar from "./components/NavBar";
 import NewUser from "./components/NewUser";
+import Chat from "./components/Chat";
 
 import Chat from "./components/Chat/Chat";
 import Music from "./components/Music"
@@ -63,7 +64,7 @@ class App extends React.Component {
         <Route path="/newuser" component={NewUser} />
         <Route path="/main" component={SearchResults} />
         <Route path="/contact" component={Contact} />
-        <Route path="/music" component={Music} />
+        <Chat />
       </div>
     );
   }
