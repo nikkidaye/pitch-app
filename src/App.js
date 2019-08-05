@@ -10,12 +10,7 @@ import Chat from "./components/Chat/Chat";
 
 // const API_KEY = "duywYDviRp03Bk2OT6ZrkE0Ccl3ODlUA";
 
-// Background video
 
-// <video autoplay muted loop id="myVideo">
-//   <source src="looping_clouds.mp4" type="video/mp4"></source>
-// </video>
-//
 
 
 

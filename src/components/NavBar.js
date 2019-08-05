@@ -4,22 +4,32 @@
   import ClickAwayListener from '@material-ui/core/ClickAwayListener';
   import Button from '@material-ui/core/Button';
   import Paper from '@material-ui/core/Paper';
-  import { grey } from '@material-ui/core/colors';
+  import { teal } from '@material-ui/core/colors';
+  import { lightBlue} from '@material-ui/core/colors';
+  import {amber} from '@material-ui/core/colors';
+  import {yellow} from '@material-ui/core/colors';
   import NewUser from './NewUser';
   import Contact from './Contact';
+  import {deepOrange} from '@material-ui/core/colors';
 
   const useStyles = makeStyles(theme => ({
     root: {
       position: 'relative',
+       // #E040FB
     },
     paper: {
+      backgroundColor: amber[400],
+      secondary:  deepOrange.A400,
+
       position: 'absolute',
       top: 36,
       right: 0,
       left: 0,
     },
     fake: {
-      backgroundColor: grey[255],
+
+      backgroundColor: yellow[200], //#ef5350
+
       height: theme.spacing(1),
       margin: theme.spacing(2),
       // Selects every two elements among any group of siblings.
@@ -48,6 +58,7 @@
         <ClickAwayListener onClickAway={handleClickAway}>
           <div>
             <Button onClick={handleClick}>Open menu</Button>
+
             {open ? (
               <Paper className={classes.paper}>
                  {fake}<a href="/newuser">New User</a>
