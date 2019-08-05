@@ -3,6 +3,7 @@ import styles from "./SearchResults.css";
 import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
+import Chat from '../Chat';
 const axios = require("axios");
 
 const useStyles = makeStyles(theme => ({
@@ -84,6 +85,7 @@ class SearchResults extends React.Component {
           <button type="submit" onClick={this.handleLoveClick}>
             Love
           </button>
+          <Chat />
           {/* {data.map((gif, index) => {
             return (
               <div className={styles.gif} key={index}>

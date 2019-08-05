@@ -67,5 +67,5 @@
   },
   "homepage": "https://github.com/nikkidaye/pitch-app#readme",
   "keywords": [],
-  "Proxy": "http://localhost:3001"
+  "Proxy": "http://localhost:8080"
 }

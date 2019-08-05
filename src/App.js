@@ -6,7 +6,6 @@ import SignIn from "./components/SignIn";
 import SearchResults from "./components/SearchResults/SearchResults";
 import NavBar from "./components/NavBar";
 import NewUser from "./components/NewUser";
-import Chat from "./components/Chat/Chat";
 
 // const API_KEY = "duywYDviRp03Bk2OT6ZrkE0Ccl3ODlUA";
 
@@ -57,7 +56,6 @@ class App extends React.Component {
 
       <div className="App">
         <NavBar />
-        <Chat />
         <Route exact path="/" component={NewUser} />
         <Route
           path="/signin"
