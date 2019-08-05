@@ -137,6 +137,7 @@ class SignIn extends React.Component {
                 </Link>
               </Grid>
             </Grid>
+          </Grid>
           </form>
         </div>
         <Box mt={5} />
