@@ -5,8 +5,8 @@
   import Button from '@material-ui/core/Button';
   import Paper from '@material-ui/core/Paper';
   import { grey } from '@material-ui/core/colors';
-  import NewUser from './NewUser';
-  import Contact from './Contact';
+  // import NewUser from './NewUser';
+  // import Contact from './Contact';
 
   const useStyles = makeStyles(theme => ({
     root: {
