@@ -38,7 +38,7 @@
 }
 
 .button {
-  background-color: blueGrey;
+  background-color: white;
 }
 .paper{
   font-family: Monospace,Lucida-Console;
@@ -49,6 +49,11 @@
   position: relative;
   z-index: 100;
 
+}
+
+#makemewhite {
+  border-color: white;
+  color:white;
 }
 
   box {

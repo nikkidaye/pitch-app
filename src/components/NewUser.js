@@ -85,8 +85,6 @@ class NewUser extends React.Component {
     this.props.history.push('/main');
   }
 
-
-
 	render() {
 
 	  return (
@@ -95,6 +93,10 @@ class NewUser extends React.Component {
           <source id={useStyles.clouds} src= { Video } type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
+
+    <canvas id="myCanvas"></canvas>
+
+
 	    <Container component="main" maxWidth="xs" id="position">
 	      <CssBaseline />
 	      <div className={useStyles.paper} id="position">
@@ -121,7 +123,7 @@ class NewUser extends React.Component {
 	              />
 	            </Grid>
 	            <Grid item xs={12} sm={6}>
-	              <TextField
+	              <TextField id="makemewhite"
 	                variant="outlined"
 	                required
 	                fullWidth

@@ -11,7 +11,6 @@
   import NewUser from './NewUser';
   import Contact from './Contact';
   import {deepOrange} from '@material-ui/core/colors';
-  import {green} from '@material-ui/core/colors';
   import {blueGrey} from '@material-ui/core/colors';
   import {indigo} from '@material-ui/core/colors';
   import {deepPurple} from '@material-ui/core/colors';
@@ -20,10 +19,6 @@
 
 
   const useStyles = makeStyles(theme => ({
-
-
-
-
     root: {
       position: 'relative',
        // #E040FB
@@ -34,7 +29,7 @@
       top: 36,
       right: 0,
       left: 0,
-      
+
     },
     fake: {
       backgroundColor: grey[100],

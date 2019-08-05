@@ -7,6 +7,7 @@ import SearchResults from "./components/SearchResults/SearchResults";
 import NavBar from "./components/NavBar";
 import NewUser from "./components/NewUser";
 import Chat from "./components/Chat/Chat";
+import Music from "./components/Music"
 
 // const API_KEY = "duywYDviRp03Bk2OT6ZrkE0Ccl3ODlUA";
 
@@ -61,6 +62,7 @@ class App extends React.Component {
         <Route path="/newuser" component={NewUser} />
         <Route path="/main" component={SearchResults} />
         <Route path="/contact" component={Contact} />
+        <Route path="/music" component={Music} />
       </div>
     );
   }
