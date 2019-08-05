@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   "@global": {
     body: {
       backgroundImage:
-        "url(https://images.unsplash.com/photo-1484199316358-d7acb93729f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1372&q=80)"
+        "url(src/components/download (1).jpeg)"
     }
   },
   paper: {

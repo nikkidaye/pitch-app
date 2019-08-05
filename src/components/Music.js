@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 const nineThirtySix = "https://www.youtube.com/watch?v=TQJ5BjXDtvY";
 const sevenFourOne = "https://www.youtube.com/watch?v=cd4bBMw3qDY";
 const fiveTwoEight = "https://www.youtube.com/watch?v=zsHJHcGCGU8";
@@ -127,8 +126,8 @@ class App extends React.Component {
     const duration = getTime(this.state.duration);
 
     return (
-      <>
-        <h1>My Little Player</h1>
+      <div>
+        <h2>My Little Player</h2>
         <ul>{list}</ul>
         <div>
           {this.state.player === "paused" && (
@@ -157,7 +156,7 @@ class App extends React.Component {
           ""
         )}
         <audio ref={ref => (this.player = ref)} />
-      </>
+      </div>
     );
   }
 }

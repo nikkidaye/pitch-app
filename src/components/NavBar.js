@@ -11,25 +11,33 @@
   import NewUser from './NewUser';
   import Contact from './Contact';
   import {deepOrange} from '@material-ui/core/colors';
+  import {green} from '@material-ui/core/colors';
+  import {blueGrey} from '@material-ui/core/colors';
+  import {indigo} from '@material-ui/core/colors';
+  import {deepPurple} from '@material-ui/core/colors';
+  import {grey} from '@material-ui/core/colors';
+  import { sizing } from '@material-ui/system';
+
 
   const useStyles = makeStyles(theme => ({
+
+
+
+
     root: {
       position: 'relative',
        // #E040FB
     },
     paper: {
-      backgroundColor: amber[400],
-      secondary:  deepOrange.A400,
-
+      backgroundColor: deepPurple[200], //#ef5350
       position: 'absolute',
       top: 36,
       right: 0,
       left: 0,
+      
     },
     fake: {
-
-      backgroundColor: yellow[200], //#ef5350
-
+      backgroundColor: grey[100],
       height: theme.spacing(1),
       margin: theme.spacing(2),
       // Selects every two elements among any group of siblings.
@@ -54,10 +62,10 @@
     const fake = <div className={classes.fake} />;
 
     return (
-      <div className={classes.root}>
+      <div className={classes.root} id="NavBar" >
         <ClickAwayListener onClickAway={handleClickAway}>
           <div>
-            <Button onClick={handleClick}>Open menu</Button>
+            <Button id="openbutt" onClick={handleClick}>Open menu</Button>
 
             {open ? (
               <Paper className={classes.paper}>

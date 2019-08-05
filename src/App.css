@@ -3,6 +3,28 @@
 
 }
 
+#NavBar {
+  background-color: black;
+  font-style: italic;
+  font: Libre Caslon Text;
+  font-weight: bold;
+  font-size: 25pt;
+  font-family: 'Libre Caslon Text', serif;
+
+}
+#welcome {
+ font-family: 'Satisfy', cursive;
+  font: Satisfy;
+  display: inline-inline-block;
+  font-size: 60pt;
+  color: white;
+
+}
+
+#openbutt {
+  background-color: white;
+}
+
 #video-bg {
   z-index: -100;
   margin: 0;
@@ -13,6 +35,14 @@
   background-size: cover;
   display: flex;
   align-items: center;
+}
+
+.button {
+  background-color: blueGrey;
+}
+.paper{
+  font-family: Monospace,Lucida-Console;
+  opacity: 100%;
 }
 
 #position {
@@ -31,10 +61,6 @@
 }
 
 TextField {
-  color: purple;
+  color: #900C3F;
 font: <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-}
-
-Button {
-  color: yellow;
 }

@@ -100,7 +100,9 @@ class NewUser extends React.Component {
 	          <LockOutlinedIcon />
 	        </Avatar>
           <div id="box">
-	        <Typography component="h1" variant="h5">Welcome New User!</Typography>
+	        <Typography component="h1" variant="h5" id="welcome"
+            >Welcome!
+          </Typography>
 	        <form className={useStyles.form} noValidate>
 	          <Grid container spacing={2}>
 	            <Grid item xs={12} sm={6}>
