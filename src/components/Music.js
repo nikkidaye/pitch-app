@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 const nineThirtySix = "https://www.youtube.com/watch?v=TQJ5BjXDtvY";
 const sevenFourOne = "https://www.youtube.com/watch?v=cd4bBMw3qDY";
 const fiveTwoEight = "https://www.youtube.com/watch?v=zsHJHcGCGU8";
@@ -23,7 +22,7 @@ function getTime(time) {
   }
 }
 
-class App extends React.Component {
+class Music extends React.Component {
   state = {
     selectedTrack: null,
     player: "stopped",
@@ -49,7 +48,7 @@ class App extends React.Component {
       let track;
       switch (this.state.selectedTrack) {
         case "sevenFourOne":
-          track = sevenForOne;
+          track = sevenFourOne;
           break;
         case "nineThirtySix":
           track = nineThirtySix;
@@ -127,8 +126,8 @@ class App extends React.Component {
     const duration = getTime(this.state.duration);
 
     return (
-      <>
-        <h1>My Little Player</h1>
+      <div>
+        <h2>Music Therapy!</h2>
         <ul>{list}</ul>
         <div>
           {this.state.player === "paused" && (
@@ -157,10 +156,9 @@ class App extends React.Component {
           ""
         )}
         <audio ref={ref => (this.player = ref)} />
-      </>
+      </div>
     );
   }
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+export default Music;

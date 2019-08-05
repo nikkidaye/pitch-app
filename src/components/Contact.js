@@ -2,8 +2,10 @@ import React from "react";
 import { FormControl, InputLabel, Input, Button } from "@material-ui/core";
 import { cyan } from '@material-ui/core/colors';
 import {deepOrange} from '@material-ui/core/colors';
+import {yellow} from '@material-ui/core/colors';
 import '../App.css';
 import Video from '../sunset.mp4'
+import {deepPurple} from '@material-ui/core/colors';
 
 
 class Contact extends React.Component {
@@ -18,8 +20,8 @@ class Contact extends React.Component {
         style={{
 
 
-          
-          backgroundColor: deepOrange.A400,
+
+          backgroundColor: deepPurple[100],
           // primary:
           // secondary: //#ef5350
           display: "flex",
