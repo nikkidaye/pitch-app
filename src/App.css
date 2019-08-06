@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-
 }
 
 #NavBar {
@@ -8,17 +7,15 @@
   font-style: italic;
   font: Libre Caslon Text;
   font-weight: bold;
-  font-size: 25pt;
-  font-family: 'Libre Caslon Text', serif;
-
+  font-size: 16pt;
+  font-family: "Libre Caslon Text", serif;
 }
 #welcome {
- font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
   font: Satisfy;
   display: inline-inline-block;
   font-size: 60pt;
   color: white;
-
 }
 
 #openbutt {
@@ -40,23 +37,22 @@
 .button {
   background-color: white;
 }
-.paper{
-  font-family: Monospace,Lucida-Console;
+.paper {
+  font-family: Monospace, Lucida-Console;
   opacity: 100%;
 }
 
 #position {
   position: relative;
   z-index: 100;
-
 }
 
 #makemewhite {
   border-color: white;
-  color:white;
+  color: white;
 }
 
-  box {
+box {
   position: relative;
   height: 100vh;
   text-align: center;
@@ -65,7 +61,14 @@
   justify-content: center;
 }
 
+.footercontainer {
+  font-style: italic;
+  font-size: 11pt;
+}
+
 TextField {
-  color: #900C3F;
-font: <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+  color: #900c3f;
+  font: <link href=
+    "https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel=
+    "stylesheet" >;
 }
