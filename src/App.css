@@ -7,11 +7,16 @@
   font-style: italic;
   font: Libre Caslon Text;
   font-weight: bold;
+<<<<<<< HEAD
   font-size: 15pt;
   font-family: 'Libre Caslon Text', serif;
+=======
+  font-size: 16pt;
+  font-family: "Libre Caslon Text", serif;
+>>>>>>> 974472584c37ab336c48fbd4a0cff2e94c78fb02
 }
 #welcome {
- font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
   font: Satisfy;
   display: inline-inline-block;
   font-size: 60pt;
@@ -41,23 +46,22 @@
 .button {
   background-color: pink;
 }
-.paper{
-  font-family: Monospace,Lucida-Console;
+.paper {
+  font-family: Monospace, Lucida-Console;
   opacity: 100%;
 }
 
 #position {
   position: relative;
   z-index: 100;
-
 }
 
 #makemewhite {
   border-color: white;
-  color:white;
+  color: white;
 }
 
-  box {
+box {
   position: relative;
   height: 100vh;
   text-align: center;
@@ -66,9 +70,16 @@
   justify-content: center;
 }
 
+.footercontainer {
+  font-style: italic;
+  font-size: 11pt;
+}
+
 TextField {
-  color: #900C3F;
-font: <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+  color: #900c3f;
+  font: <link href=
+    "https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel=
+    "stylesheet" >;
 }
 #contact{
   font-color: white;

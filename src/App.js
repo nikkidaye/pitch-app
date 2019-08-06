@@ -6,16 +6,17 @@ import SignIn from "./components/SignIn";
 import SearchResults from "./components/SearchResults/SearchResults";
 import NavBar from "./components/NavBar";
 import NewUser from "./components/NewUser";
+<<<<<<< HEAD
 
 import Chat from "./components/Chat";
 import Music from "./components/Music"
 
+=======
+import Footer from "./components/Footer";
+import Chat from "./components/Chat";
+>>>>>>> 974472584c37ab336c48fbd4a0cff2e94c78fb02
 
 // const API_KEY = "duywYDviRp03Bk2OT6ZrkE0Ccl3ODlUA";
-
-
-
-
 
 class App extends React.Component {
   constructor() {
@@ -51,8 +52,6 @@ class App extends React.Component {
   };
   render() {
     return (
-
-
       <div className="App">
         <NavBar />
         <Route exact path="/" component={NewUser} />
@@ -63,7 +62,8 @@ class App extends React.Component {
         <Route path="/newuser" component={NewUser} />
         <Route path="/main" component={SearchResults} />
         <Route path="/contact" component={Contact} />
-        <Route path="/music" component={Music} />
+        <Chat />
+        <Footer />
       </div>
     );
   }
