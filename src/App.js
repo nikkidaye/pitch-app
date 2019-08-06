@@ -2,13 +2,13 @@ import React from "react";
 import { Route } from "react-router-dom";
 import axios from "axios";
 import Contact from "./components/Contact";
-import SignIn from "./components/SignIn";
+
 import SearchResults from "./components/SearchResults/SearchResults";
 import NavBar from "./components/NavBar";
 import NewUser from "./components/NewUser";
-
-import Chat from "./components/Chat/Chat";
-import Music from "./components/Music"
+import TipsComponent from "./components/TipsComponent";
+import Chat from "./components/Chat";
+// import Music from "./components/Music";
 
 
 // const API_KEY = "duywYDviRp03Bk2OT6ZrkE0Ccl3ODlUA";
@@ -56,14 +56,13 @@ class App extends React.Component {
       <div className="App">
         <NavBar />
         <Route exact path="/" component={NewUser} />
-        <Route
-          path="/signin"
-          render={() => <SignIn updateUser={this.updateUser} />}
-        />
         <Route path="/newuser" component={NewUser} />
         <Route path="/main" component={SearchResults} />
         <Route path="/contact" component={Contact} />
-        <Route path="/music" component={Music} />
+        // <Route path="/music" component={Music} />
+        <Route path="/tipscomponent" component={TipsComponent} />
+
+
       </div>
     );
   }

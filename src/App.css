@@ -2,13 +2,61 @@
   text-align: center;
 
 }
+#center{
+  display: flex;
+  align-items: center;
+  background: yellow;
+  font-family: 'Domine', serif;
+  margin-left: 50%;
+}
+#slides{
+  display: flex;
+  align-items: center;
+  background: yellow;
+  font-family: 'Domine', serif;
+  margin-left: 50%;
+
+}
+/* mental health bar */
+#reminder{
+  font-family: 'Domine', serif;
+  font-size: 20pt;
+  color: pink;
+}
+/* mental health header */
+#header {
+  font-family: 'Forum', cursive;
+}
+/* apply these tips  */
+#apply {
+  font-family: 'Lustria', serif;
+}
+
+
+
+#slider {
+  font-family: 'Courgette', cursive;
+  margin-left: 60%;
+  display: flex;
+  align-items: center;
+}
+
+#healthtips {
+font-family: 'Libre Caslon Text', serif;
+}
+#below {
+  font-family: 'Libre Caslon Text', serif;
+}
+#appbar {
+  color:#84B9B6;
+}
 
 #NavBar {
-  background-color: black;
+  background-color: #aecbdd;
   font-style: italic;
   font: Libre Caslon Text;
   font-weight: bold;
-  font-size: 25pt;
+  font-size: 10pt;
   font-family: 'Libre Caslon Text', serif;
 
 }
@@ -22,7 +70,11 @@
 }
 
 #openbutt {
-  background-color: white;
+  background-color: blueGrey[500];
+  font-family: 'Lobster Two', cursive;
+  font-size: 15pt;
+  color: white;
+
 }
 
 #video-bg {

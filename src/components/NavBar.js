@@ -4,7 +4,6 @@
   import ClickAwayListener from '@material-ui/core/ClickAwayListener';
   import Button from '@material-ui/core/Button';
   import Paper from '@material-ui/core/Paper';
-
   import { teal } from '@material-ui/core/colors';
   import { lightBlue} from '@material-ui/core/colors';
   import {amber} from '@material-ui/core/colors';
@@ -17,6 +16,7 @@
   import {deepPurple} from '@material-ui/core/colors';
   import {grey} from '@material-ui/core/colors';
   import { sizing } from '@material-ui/system';
+  import {blue} from '@material-ui/core/colors';
 
 
 
@@ -26,15 +26,15 @@
        // #E040FB
     },
     paper: {
-      backgroundColor: deepPurple[200], //#ef5350
+      backgroundColor: grey[300], //#ef5350
       position: 'absolute',
-      top: 36,
+      top: 30,
       right: 0,
       left: 0,
 
     },
     fake: {
-      backgroundColor: grey[100],
+      // backgroundColor: grey[100],
       height: theme.spacing(1),
       margin: theme.spacing(2),
       // Selects every two elements among any group of siblings.
@@ -62,14 +62,15 @@
       <div className={classes.root} id="NavBar" >
         <ClickAwayListener onClickAway={handleClickAway}>
           <div>
-            <Button id="openbutt" onClick={handleClick}>Open menu</Button>
+            <Button id="openbutt" onClick={handleClick}>Menu</Button>
 
             {open ? (
               <Paper className={classes.paper}>
                  {fake}<a href="/newuser">New User</a>
-               {fake}<a href="/main">Visual Therapy</a>
-             {fake}<a href="/music">Phono Therapy</a>
-           {fake}<a href="/contact">Contact Us</a>
+                 {fake}<a href="/main">Visual Therapy</a>
+                 {fake}<a href="/music">Phono Therapy</a>
+                 {fake}<a href="/contact">Contact Us</a>
+                 {fake}<a href="/tipscomponent">Health Tips</a>
               </Paper>
             ) : null}
           </div>
@@ -77,56 +78,3 @@
       </div>
     );
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//
-//
-//
-//
-//     export default function SimpleMenu() {
-//          const [anchorEl, setAnchorEl] = React.useState(null);
-//
-//          function handleClick(event) {
-//            setAnchorEl(event.currentTarget);
-//          }
-//
-//          function handleClose() {
-//            setAnchorEl(null);
-//          }
-//
-//          return (
-//            <div>
-//              <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} >
-//                Open Menu
-//              </Button>
-//              <Menu
-//                id="simple-menu"
-//                anchorEl={anchorEl}
-//                keepMounted
-//                open={Boolean(anchorEl)}
-//                onClose={handleClose}
-//                ></Menu>
-//
-//
-//
-//                <MenuItem onClick={handleClose} >Sign Up</MenuItem>
-//                <MenuItem onClick={handleClose} >Contact Us</MenuItem>
-//                <MenuItem onClick={handleClose} >Sign In</MenuItem>
-//                <MenuItem onClick={handleClose} >Image Therapy</MenuItem>
-//               <MenuItem onClick={handleClose} >Music Therapy</MenuItem>
-//            </div>
-//
-// );
-//         }

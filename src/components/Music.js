@@ -1,164 +1,134 @@
-import React from "react";
-import ReactDOM from "react-dom";
-const nineThirtySix = "https://www.youtube.com/watch?v=TQJ5BjXDtvY";
-const sevenFourOne = "https://www.youtube.com/watch?v=cd4bBMw3qDY";
-const fiveTwoEight = "https://www.youtube.com/watch?v=zsHJHcGCGU8";
-const fourSeventeen = "https://www.youtube.com/watch?v=I_FpVaV1pHc";
-const confidence = "https://www.youtube.com/watch?v=PZv5iNxjYpU";
-const brainPower = "https://www.youtube.com/watch?v=b_DcQHbJIfE";
-const enhance = "https://www.youtube.com/watch?v=b_DcQHbJIfE&list=RDb_DcQHbJIfE&start_radio=1&t=5";
-const cleanseEnergy = "https://www.youtube.com/watch?v=EBbA1TVHVXs&list=RDb_DcQHbJIfE&index=2";
-const bobEnergy = "https://www.youtube.com/watch?v=lxbqeQf6O-k&list=PLs5G32duA1WEfB6ncURivjUMpDxKODFaZ";
-
-
-
-
-
-function getTime(time) {
-  if (!isNaN(time)) {
-    return (
-      Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
-    );
-  }
-}
-
-class Music extends React.Component {
-  state = {
-    selectedTrack: null,
-    player: "stopped",
-    currentTime: null,
-    duration: null
-  };
-
-  componentDidMount() {
-    this.player.addEventListener("timeupdate", e => {
-      this.setState({
-        currentTime: e.target.currentTime,
-        duration: e.target.duration
-      });
-    });
-  }
-
-  componentWillUnmount() {
-    this.player.removeEventListener("timeupdate", () => {});
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.selectedTrack !== prevState.selectedTrack) {
-      let track;
-      switch (this.state.selectedTrack) {
-        case "sevenFourOne":
-          track = sevenFourOne;
-          break;
-        case "nineThirtySix":
-          track = nineThirtySix;
-          break;
-          case "fiveTwoEight":
-            track = fiveTwoEight;
-            break;
-            case "fourSeventeen":
-              track = fourSeventeen;
-              break;
-            case "confidence":
-                track = confidence;
-                break;
-            case "brainPower":
-                  track = brainPower;
-                break;
-            case "enhance":
-                  track = enhance;
-            break;
-            case "cleanseEnergy":
-              track = cleanseEnergy;
-              break;
-              case "bobEnergy":
-                track = bobEnergy;
-                break;
-        default:
-          break;
-      }
-      if (track) {
-        this.player.src = track;
-        this.player.play();
-        this.setState({ player: "playing", duration: this.player.duration });
-      }
-    }
-    if (this.state.player !== prevState.player) {
-      if (this.state.player === "paused") {
-        this.player.pause();
-      } else if (this.state.player === "stopped") {
-        this.player.pause();
-        this.player.currentTime = 0;
-        this.setState({ selectedTrack: null });
-      } else if (
-        this.state.player === "playing" &&
-        prevState.player === "paused"
-      ) {
-        this.player.play();
-      }
-    }
-  }
-
-  render() {
-    const list = [
-      { id: 1, title: "sevenFourOne" },
-      { id: 2, title: "nineThirtySix" },
-      { id: 3, title: "fiveTwoEight" },
-      { id: 4, title: "fourSeventeen"},
-      { id: 5, title: "confidence"},
-      { id: 6, title: "brainPower"},
-      { id: 7, title: "enhance" },
-      { id: 8, title: "cleanseEnergy"},
-      { id: 9, title: "bobEnergy" },
-
-    ].map(item => {
-      return (
-        <li
-          key={item.id}
-          onClick={() => this.setState({ selectedTrack: item.title })}
-        >
-          {item.title}
-        </li>
-      );
-    });
-
-    const currentTime = getTime(this.state.currentTime);
-    const duration = getTime(this.state.duration);
-
-    return (
-      <div>
-        <h2>Music Therapy!</h2>
-        <ul>{list}</ul>
-        <div>
-          {this.state.player === "paused" && (
-            <button onClick={() => this.setState({ player: "playing" })}>
-              Play
-            </button>
-          )}
-          {this.state.player === "playing" && (
-            <button onClick={() => this.setState({ player: "paused" })}>
-              Pause
-            </button>
-          )}
-          {this.state.player === "playing" || this.state.player === "paused" ? (
-            <button onClick={() => this.setState({ player: "stopped" })}>
-              Stop
-            </button>
-          ) : (
-            ""
-          )}
-        </div>
-        {this.state.player === "playing" || this.state.player === "paused" ? (
-          <div>
-            {currentTime} / {duration}
-          </div>
-        ) : (
-          ""
-        )}
-        <audio ref={ref => (this.player = ref)} />
-      </div>
-    );
-  }
-}
-
-export default Music;
+// import React from 'react';
+//
+//
+//
+//
+// // Player
+// var Player = React.createClass({
+// 	getInitialState: function() {
+// 		return {
+// 			playStatus: 'play',
+// 			currentTime: 0
+// 		}
+// 	},
+// 	getDefaultProps: function() {
+// 		return {
+// 			track: {
+// 				name: "We Were Young",
+// 				artist: "Odesza",
+// 				album: "Summer's Gone",
+// 				year: 2012,
+// 				artwork: "https://funkadelphia.files.wordpress.com/2012/09/odesza-summers-gone-lp.jpg",
+// 				duration: 192,
+// 				source: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/wwy.mp3"
+// 			}
+// 		}
+// 	},
+// 	render: function() {
+// 		return (
+// 			<div className="Player">
+// 				<div className="Background" style={{'backgroundImage': 'url(' + this.props.track.artwork + ')'}}></div>
+// 				<div className="Header"><div className="Title">Now playing</div></div>
+// 				<div className="Artwork" style={{'backgroundImage': 'url(' + this.props.track.artwork + ')'}}></div>
+// 				<TrackInformation track={this.props.track} />
+// 				<Scrubber />
+// 				<Controls />
+// 				<Timestamps duration={this.props.track.duration} currentTime={this.state.currentTime} />
+// 				<audio>
+// 					<source src={this.props.track.source} />
+// 				</audio>
+// 			</div>
+// 		)
+// 	}
+// });
+//
+// var TrackInformation = React.createClass({
+// 	render: function() {
+// 		return (
+// 			<div className="TrackInformation">
+// 				<div className="Name">{this.props.track.name}</div>
+// 				<div className="Artist">{this.props.track.artist}</div>
+// 				<div className="Album">{this.props.track.album} ({this.props.track.year})</div>
+// 			</div>
+// 		)
+// 	}
+// });
+//
+// var Scrubber = React.createClass({
+// 	render: function() {
+// 		return (
+// 			<div className="Scrubber">
+// 				<div className="Scrubber-Progress"></div>
+// 			</div>
+// 		)
+// 	}
+// });
+//
+// var Controls = React.createClass({
+// 	render: function() {
+// 		return (
+// 			<div className="Controls">
+// 				<div className="Button">
+// 					<i className="fa fa-fw fa-play"></i>
+// 				</div>
+// 			</div>
+// 		)
+// 	}
+// });
+//
+// var Timestamps = React.createClass({
+// 	render: function() {
+// 		return (
+// 			<div className="Timestamps">
+// 				<div className="Time Time--current">{this.props.currentTime}</div>
+// 				<div className="Time Time--total">{this.props.duration}</div>
+// 			</div>
+// 		)
+// 	}
+// });
+// convertTime: function(timestamp) {
+//     let minutes = Math.floor(timestamp / 60);
+//   let seconds = timestamp - (minutes * 60);
+//     if (seconds < 10) { seconds = '0' + seconds; }
+//     timestamp = minutes + ':' + seconds;
+//     return timestamp;
+// }
+// togglePlay: function() {
+//   let status = this.state.playStatus;
+//   let audio = document.getElementById('audio');
+//   if(status === 'play') {
+//     status = 'pause'; audio.play();
+//   } else {
+//     status = 'play'; audio.pause();
+//   }
+//   this.setState({ playStatus: status });
+// }
+// render: function() {
+//   let classNames;
+//   if (this.props.isPlaying == 'pause') {
+//     classNames = 'fa fa-fw fa-pause';
+//   } else {
+//     classNames = 'fa fa-fw fa-play';
+//   }
+//   return {...}
+// }
+// updateTime: function(timestamp) {
+//   timestamp = Math.floor(timestamp);
+//   this.setState({ currentTime: timestamp });
+// }
+// audio.play();
+// let _this = this;
+// setInterval(function() {
+//   .....
+//   _this.updateScrubber(percent);
+//   _this.updateTime(currentTime);
+// }, 100);
+//
+// // Render the UI
+// ReactDOM.render(
+// 	<Player />,
+// 	document.querySelector('body')
+// );
+//
+//
+// export default Music;
