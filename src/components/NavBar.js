@@ -26,15 +26,16 @@
        // #E040FB
     },
     paper: {
-      backgroundColor: deepPurple[200], //#ef5350
+      backgroundColor: grey[100],
       position: 'absolute',
-      top: 36,
+      top: 35,
       right: 0,
       left: 0,
 
     },
     fake: {
-      backgroundColor: grey[100],
+      backgroundColor: indigo[200],
+      color: deepPurple[100],
       height: theme.spacing(1),
       margin: theme.spacing(2),
       // Selects every two elements among any group of siblings.
@@ -46,7 +47,7 @@
 
   export default function ClickAway() {
     const [open, setOpen] = React.useState(false);
-    const classes = useStyles();
+
 
     const handleClick = () => {
       setOpen(prev => !prev);
@@ -56,16 +57,17 @@
       setOpen(false);
     };
 
-    const fake = <div className={classes.fake} />;
+    const fake = <div className={useStyles.fake} />;
 
     return (
-      <div className={classes.root} id="NavBar" >
+      <div className={useStyles.root} id="NavBar" >
         <ClickAwayListener onClickAway={handleClickAway}>
           <div>
-            <Button id="openbutt" onClick={handleClick}>Open menu</Button>
+            <Button id="openbutt" onClick={handleClick}>Menu</Button>
 
             {open ? (
-              <Paper className={classes.paper}>
+
+              <Paper className={useStyles.paper}>
                  {fake}<a href="/newuser">New User</a>
                {fake}<a href="/main">Visual Therapy</a>
              {fake}<a href="/music">Phono Therapy</a>

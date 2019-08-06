@@ -1,16 +1,14 @@
 .App {
   text-align: center;
-
 }
 
 #NavBar {
-  background-color: black;
+  background-color: #26c6da;
   font-style: italic;
   font: Libre Caslon Text;
   font-weight: bold;
-  font-size: 25pt;
+  font-size: 15pt;
   font-family: 'Libre Caslon Text', serif;
-
 }
 #welcome {
  font-family: 'Satisfy', cursive;
@@ -18,13 +16,16 @@
   display: inline-inline-block;
   font-size: 60pt;
   color: white;
-
 }
-
 #openbutt {
-  background-color: white;
-}
+  background-color: #26c6da;
+  border-style: dotted;
+  border-color: black;
+  color: white;
+  font-size: 15pt;
+  font-family: 'Pacifico', cursive;
 
+}
 #video-bg {
   z-index: -100;
   margin: 0;
@@ -38,7 +39,7 @@
 }
 
 .button {
-  background-color: white;
+  background-color: pink;
 }
 .paper{
   font-family: Monospace,Lucida-Console;
@@ -68,4 +69,24 @@
 TextField {
   color: #900C3F;
 font: <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+}
+#contact{
+  font-color: white;
+  font-family: 'Gochi Hand', cursive;
+}
+
+.contact {
+
+  border-width: thick;
+  border-style: solid;
+  border-color: #D7BDE2;
+}
+
+a {
+  color: #82E0AA;
+text-decoration: none;
+font-size: 15pt;
+background-color: white;
+display: fixed;
+z-index: 1000;
 }

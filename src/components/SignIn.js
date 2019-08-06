@@ -2,7 +2,7 @@
 // import axios from "axios";
 
 
-import React from "react";
+// import React from "react";
 
 // import Avatar from "@material-ui/core/Avatar";
 // import Button from "@material-ui/core/Button";
@@ -41,7 +41,7 @@ import React from "react";
 //   submit: {
 //     margin: theme.spacing(3, 0, 2)
 //   }
-// })); 
+// }));
 //
 // class SignIn extends React.Component {
 //   constructor() {
@@ -177,7 +177,7 @@ import React from "react";
 //   }
 // }));
 
-class SignIn extends React.Component {
+// class SignIn extends React.Component {
   // constructor() {
   //   super();
   //   this.state = {
@@ -219,13 +219,13 @@ class SignIn extends React.Component {
   //     });
   // };
 
-  render() {
-    return (
-      <Container component="main" maxWidth="xs">
-
-      </Container>
-    );
-  }
-}
-
-export default SignIn;
+//   render() {
+//     return (
+//       <Container component="main" maxWidth="xs">
+//
+//       </Container>
+//     );
+//   }
+// }
+//
+// export default SignIn;

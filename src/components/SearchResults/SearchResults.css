@@ -35,6 +35,12 @@ video {
   min-height: 100%;
 }
 
+images {
+font-style: italic;
+
+}
+
+
 #confidence-booster {
     -moz-box-shadow:inset 0px 1px 0px 0px #a4e271;
     -webkit-box-shadow:inset 0px 1px 0px 0px #a4e271;
@@ -75,7 +81,7 @@ video {
     position:relative;
     top:1px;
   }
-  
+
   .myButton {
     -moz-box-shadow: 0px 10px 14px -7px #276873;
     -webkit-box-shadow: 0px 10px 14px -7px #276873;
@@ -120,4 +126,3 @@ video {
   color: white;
   background-color: teal;
   background-blend-mode: lighten; */
-   

@@ -189,8 +189,8 @@ class SearchResults extends React.Component {
                     color="inherit"
                     className={useStyles.imageTitle}
                   >
-                    Confidence Booster
-                    <span className={useStyles.imageMarked} />
+                  Confidence Booster
+                    <span className={useStyles.imageMarked} id="confidence" />
                   </Typography>
                 </span>
               </ButtonBase>
@@ -221,7 +221,7 @@ class SearchResults extends React.Component {
                     className={useStyles.imageTitle}
                   >
                     Love
-                    <span className={useStyles.imageMarked} />
+                    <span className={useStyles.imageMarked} id="love"/>
                   </Typography>
                 </span>
               </ButtonBase>
@@ -251,12 +251,12 @@ class SearchResults extends React.Component {
                     className={useStyles.imageTitle}
                   >
                     Make Me Laugh
-                    <span className={useStyles.imageMarked} />
+                    <span className={useStyles.imageMarked} id="makemelaugh"/>
                   </Typography>
                 </span>
               </ButtonBase>
               </div>
-              
+
 
 
         <div className={useStyles.root}>

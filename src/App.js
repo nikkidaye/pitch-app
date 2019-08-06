@@ -7,7 +7,7 @@ import SearchResults from "./components/SearchResults/SearchResults";
 import NavBar from "./components/NavBar";
 import NewUser from "./components/NewUser";
 
-import Chat from "./components/Chat/Chat";
+import Chat from "./components/Chat";
 import Music from "./components/Music"
 
 
