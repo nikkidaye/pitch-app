@@ -15,6 +15,9 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import Slider from '@material-ui/core/Slider';
 import {teal} from '@material-ui/core/colors';
+import {deepPurple} from '@material-ui/core/colors';
+import {pink} from '@material-ui/core/colors';
+import {indigo} from '@material-ui/core/colors';
 function MadeWithLove() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -38,17 +41,21 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(4),
   },
   cardGrid: {
+    
+    backgroundColor:deepPurple[200],
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(10),
-    backgroundColor: teal.A200,
+    backgroundColor: indigo[400],
   },
   card: {
+    color: pink[200],
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
   cardMedia: {
+
     paddingTop: '30%', // 16:9
   },
   cardContent: {
@@ -99,16 +106,13 @@ export default function Album() {
         </div>
         <Container className={classes.cardGrid} maxWidth="5">
 
-  {/* End hero unit */}
-  {/* Card One */}
-
+{/*Card 1*/}
           <Grid container spacing={1}>
-            {cards.map(card => (
-              <Grid item key={card} xs={3} sm={5} md={4}>
+              <Grid item xs={3} sm={5} md={4}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://unsplash.com/photos/DFtjXYd5Pto"
+                    image="https://pbs.twimg.com/media/EBTn2ybWsAAKsoS?format=jpg&name=small"
                     title="Keep Showing Up"
                   />
                   <CardContent className={classes.cardContent}>
@@ -117,53 +121,41 @@ export default function Album() {
                     </Typography>
                     <Typography>
                       Get a good night's rest.
-                      Make sure to give yourself an 8-hour block of sleep each night. Sleep is very important.
+                      Make sure to give yourself an 8-hour block of sleep each night. Sleep is very important. When your body has the opportunity to rest, it restores your energy and allows your brain to take a break. Harmful medical conditions can be a result of lack of sleep.
                     </Typography>
                   </CardContent>
                 </Card>
               </Grid>
-            ))}
-          </Grid>
-        </Container>
-{/*card number 2 i think*/}
-
-          <Grid container spacing={1}>
-          {cards.map(card => (
-            <Grid item key={card} xs={3} sm={5} md={4}>
-            <Card className={classes.card}>
-            <CardMedia
-          className={classes.cardMedia}
-          image="https://unsplash.com/photos/DFtjXYd5Pto"
-          title="Keep Showing Up"
-        />
-        <CardContent className={classes.cardContent}>
-          <Typography gutterBottom variant="h5" component="h2">
-          Eat Breakfast
-          </Typography>
-          <Typography>
-            Sit down and eat a nutritious breakfast. Studies show that a rich and hearty breakfast can help improve mood and mental performance throughout your day.
-            </Typography>
-            </CardContent>
-            </Card>
-            </Grid>
-          ))}
-            </Grid>
-
-{/*card number 3 i think*/}
-
-
-            <Grid container spacing={1}>
-            {cards.map(card => (
-              <Grid item key={card} xs={3} sm={5} md={4}>
+{/*Card 2*/}
+              <Grid item xs={3} sm={5} md={4}>
               <Card className={classes.card}>
               <CardMedia
             className={classes.cardMedia}
-            image="https://unsplash.com/photos/DFtjXYd5Pto"
+            image="https://pbs.twimg.com/media/EBTn2ybWsAAKsoS?format=jpg&name=small"
             title="Keep Showing Up"
           />
           <CardContent className={classes.cardContent}>
             <Typography gutterBottom variant="h5" component="h2">
-            Pay Attention
+            Eat Breakfast
+            </Typography>
+            <Typography>
+              Sit down and eat a nutritious breakfast. Studies show that a rich and hearty breakfast can help improve mood and mental performance throughout your day.
+              </Typography>
+              </CardContent>
+              </Card>
+              </Grid>
+
+{/*Card 3*/}
+              <Grid item xs={3} sm={5} md={4}>
+              <Card className={classes.card}>
+              <CardMedia
+            className={classes.cardMedia}
+            image="https://pbs.twimg.com/media/EBTn2ybWsAAKsoS?format=jpg&name=small"
+            title="Keep Showing Up"
+            />
+            <CardContent className={classes.cardContent}>
+            <Typography gutterBottom variant="h5" component="h2">
+            Details Details Details
             </Typography>
             <Typography>
               Pay attention and love yourself. Spend time doing things that you enjoy. Do not neglect the things that make you upset,sad, and happy!
@@ -171,48 +163,17 @@ export default function Album() {
               </CardContent>
               </Card>
               </Grid>
-            ))}
-              </Grid>
+
+{/*end of first row*/}
+
+          </Grid>
+        </Container>
+
+{/*Counter negative thoughts with positive ones. Negative thoughts do not have to consume you.
+If you are feeling anxious or nervous each negative thought, should be followed with a positive
 
 
-
-
-{/*Card number 4*/}
-<Grid container spacing={1}>
-{cards.map(card => (
-  <Grid item key={card} xs={3} sm={5} md={4}>
-  <Card className={classes.card}>
-  <CardMedia
-className={classes.cardMedia}
-image="https://unsplash.com/photos/DFtjXYd5Pto"
-title="Keep Showing Up"
-/>
-<CardContent className={classes.cardContent}>
-<Typography gutterBottom variant="h5" component="h2">
-Opposites Attract
-</Typography>
-<Typography>
-  Counter negative thoughts with positive ones. Negative thoughts do not have to consume you.
-  If you are feeling anxious or nervous each negative thought, should be followed with a positive.
-  </Typography>
-  </CardContent>
-  </Card>
-  </Grid>
-))}
-  </Grid>
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/}
 
 
 

@@ -1,134 +1,72 @@
-// import React from 'react';
-//
-//
-//
-//
-// // Player
-// var Player = React.createClass({
-// 	getInitialState: function() {
-// 		return {
-// 			playStatus: 'play',
-// 			currentTime: 0
-// 		}
-// 	},
-// 	getDefaultProps: function() {
-// 		return {
-// 			track: {
-// 				name: "We Were Young",
-// 				artist: "Odesza",
-// 				album: "Summer's Gone",
-// 				year: 2012,
-// 				artwork: "https://funkadelphia.files.wordpress.com/2012/09/odesza-summers-gone-lp.jpg",
-// 				duration: 192,
-// 				source: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/wwy.mp3"
-// 			}
-// 		}
-// 	},
-// 	render: function() {
-// 		return (
-// 			<div className="Player">
-// 				<div className="Background" style={{'backgroundImage': 'url(' + this.props.track.artwork + ')'}}></div>
-// 				<div className="Header"><div className="Title">Now playing</div></div>
-// 				<div className="Artwork" style={{'backgroundImage': 'url(' + this.props.track.artwork + ')'}}></div>
-// 				<TrackInformation track={this.props.track} />
-// 				<Scrubber />
-// 				<Controls />
-// 				<Timestamps duration={this.props.track.duration} currentTime={this.state.currentTime} />
-// 				<audio>
-// 					<source src={this.props.track.source} />
-// 				</audio>
-// 			</div>
-// 		)
-// 	}
-// });
-//
-// var TrackInformation = React.createClass({
-// 	render: function() {
-// 		return (
-// 			<div className="TrackInformation">
-// 				<div className="Name">{this.props.track.name}</div>
-// 				<div className="Artist">{this.props.track.artist}</div>
-// 				<div className="Album">{this.props.track.album} ({this.props.track.year})</div>
-// 			</div>
-// 		)
-// 	}
-// });
-//
-// var Scrubber = React.createClass({
-// 	render: function() {
-// 		return (
-// 			<div className="Scrubber">
-// 				<div className="Scrubber-Progress"></div>
-// 			</div>
-// 		)
-// 	}
-// });
-//
-// var Controls = React.createClass({
-// 	render: function() {
-// 		return (
-// 			<div className="Controls">
-// 				<div className="Button">
-// 					<i className="fa fa-fw fa-play"></i>
-// 				</div>
-// 			</div>
-// 		)
-// 	}
-// });
-//
-// var Timestamps = React.createClass({
-// 	render: function() {
-// 		return (
-// 			<div className="Timestamps">
-// 				<div className="Time Time--current">{this.props.currentTime}</div>
-// 				<div className="Time Time--total">{this.props.duration}</div>
-// 			</div>
-// 		)
-// 	}
-// });
-// convertTime: function(timestamp) {
-//     let minutes = Math.floor(timestamp / 60);
-//   let seconds = timestamp - (minutes * 60);
-//     if (seconds < 10) { seconds = '0' + seconds; }
-//     timestamp = minutes + ':' + seconds;
-//     return timestamp;
-// }
-// togglePlay: function() {
-//   let status = this.state.playStatus;
-//   let audio = document.getElementById('audio');
-//   if(status === 'play') {
-//     status = 'pause'; audio.play();
-//   } else {
-//     status = 'play'; audio.pause();
-//   }
-//   this.setState({ playStatus: status });
-// }
-// render: function() {
-//   let classNames;
-//   if (this.props.isPlaying == 'pause') {
-//     classNames = 'fa fa-fw fa-pause';
-//   } else {
-//     classNames = 'fa fa-fw fa-play';
-//   }
-//   return {...}
-// }
-// updateTime: function(timestamp) {
-//   timestamp = Math.floor(timestamp);
-//   this.setState({ currentTime: timestamp });
-// }
-// audio.play();
-// let _this = this;
-// setInterval(function() {
-//   .....
-//   _this.updateScrubber(percent);
-//   _this.updateTime(currentTime);
-// }, 100);
-//
-// // Render the UI
-// ReactDOM.render(
-// 	<Player />,
-// 	document.querySelector('body')
-// );
-//
-//
-// export default Music;
+import React from 'react';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import SkipNextIcon from '@material-ui/icons/SkipNext';
+
+const useStyles = makeStyles(theme => ({
+  card: {
+    display: 'flex',
+  },
+  details: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  content: {
+    flex: '1 0 auto',
+  },
+  cover: {
+    width: 151,
+  },
+  controls: {
+    display: 'flex',
+    alignItems: 'center',
+    paddingLeft: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
+  },
+  playIcon: {
+    height: 38,
+    width: 38,
+  },
+}));
+
+export default function MediaControlCard() {
+  const classes = useStyles();
+  const theme = useTheme();
+
+  return (
+    <Card className={classes.card}>
+      <div className={classes.details}>
+        <CardContent className={classes.content}>
+          <Typography component="h5" variant="h5">
+            Live From Space
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            Mac Miller
+          </Typography>
+        </CardContent>
+        <div className={classes.controls}>
+          <IconButton aria-label="previous">
+            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
+          </IconButton>
+          <IconButton aria-label="play/pause">
+            <PlayArrowIcon className={classes.playIcon} />
+          </IconButton>
+          <IconButton aria-label="next">
+            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
+          </IconButton>
+        </div>
+      </div>
+      <CardMedia
+        className={classes.cover}
+        image="/static/images/cards/live-from-space.jpg"
+        title="Live from space album cover"
+      />
+    </Card>
+  );
+}

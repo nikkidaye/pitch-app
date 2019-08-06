@@ -256,7 +256,7 @@ class SearchResults extends React.Component {
                 </span>
               </ButtonBase>
               </div>
-              
+
 
 
         <div className={useStyles.root}>

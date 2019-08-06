@@ -2,6 +2,7 @@
   text-align: center;
 
 }
+
 #center{
   display: flex;
   align-items: center;
@@ -48,19 +49,21 @@ font-family: 'Libre Caslon Text', serif;
   font-family: 'Libre Caslon Text', serif;
 }
 #appbar {
-  color:#84B9B6;
+  color:black;
 }
 
 #NavBar {
-  background-color: #aecbdd;
+  background-color: black;
   font-style: italic;
   font: Libre Caslon Text;
   font-weight: bold;
   font-size: 10pt;
   font-family: 'Libre Caslon Text', serif;
+  padding: none;
 
 }
 #welcome {
+
  font-family: 'Satisfy', cursive;
   font: Satisfy;
   display: inline-inline-block;
@@ -70,7 +73,7 @@ font-family: 'Libre Caslon Text', serif;
 }
 
 #openbutt {
-  background-color: blueGrey[500];
+  background-color: blueGrey[900];
   font-family: 'Lobster Two', cursive;
   font-size: 15pt;
   color: white;
@@ -79,6 +82,7 @@ font-family: 'Libre Caslon Text', serif;
 
 #video-bg {
   z-index: -100;
+  margin-top: 0;
   margin: 0;
   padding: 0;
   position: fixed;

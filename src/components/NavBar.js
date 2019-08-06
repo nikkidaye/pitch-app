@@ -26,6 +26,7 @@
        // #E040FB
     },
     paper: {
+      
       backgroundColor: grey[300], //#ef5350
       position: 'absolute',
       top: 30,
@@ -35,7 +36,7 @@
     },
     fake: {
       // backgroundColor: grey[100],
-      height: theme.spacing(1),
+      height: theme.spacing(0),
       margin: theme.spacing(2),
       // Selects every two elements among any group of siblings.
       '&:nth-child(2n)': {
