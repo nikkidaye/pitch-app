@@ -6,32 +6,32 @@ import {yellow} from '@material-ui/core/colors';
 import '../App.css';
 import Video from '../sunset.mp4'
 import {deepPurple} from '@material-ui/core/colors';
+import {grey} from '@material-ui/core/colors';
+
 
 
 class Contact extends React.Component {
   // onSubmit = () => {
-  //   alert("Thank you for your message. You will receive a response within 24-48 hours. For immediate assistance or if someone you know is in danger please call 911") 
+  //   alert("Thank you for your message. You will receive a response within 24-48 hours. For immediate assistance or if someone you know is in danger please call 911")
   // }
   myClick = () => {alert("Thank you for your message, we will respond within 24-48 hours.")}
- 
+
+
   render() {
     return (
-      <div
+      <div className="contact"
         style={{
-
-
-
           backgroundColor: deepPurple[100],
           // primary:
           // secondary: //#ef5350
           display: "flex",
           justifyContent: "center",
-          margin: 20,
-          padding: 20
+          margin: 100,
+          padding: 20,
         }}
       >
-        <form style={{ width: "50%" }}>
-          <h1>Contact Form</h1>
+        <form style={{ width: "100%" }}>
+          <h1 id="contact" style={{color: grey[50], }}>Contact Us</h1>
 
           <FormControl margin="normal" fullWidth>
             <InputLabel htmlFor="name">Name</InputLabel>
@@ -52,7 +52,7 @@ class Contact extends React.Component {
             Send
           </Button>
 
-      
+
         </form>
 
 

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-const nineThirtySix = "https://www.youtube.com/watch?v=TQJ5BjXDtvY";
-const sevenFourOne = "https://www.youtube.com/watch?v=cd4bBMw3qDY";
+const nineThirtySix = "src/components/THE GOD FREQUENCY Remove Self Limiting Beliefs 963 Hz Kundalini Energy.mp3";
+const sevenFourOne = "./sevenFortyOne.mp3";
 const fiveTwoEight = "https://www.youtube.com/watch?v=zsHJHcGCGU8";
 const fourSeventeen = "https://www.youtube.com/watch?v=I_FpVaV1pHc";
 const confidence = "https://www.youtube.com/watch?v=PZv5iNxjYpU";

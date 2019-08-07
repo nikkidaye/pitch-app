@@ -42,6 +42,12 @@ video {
   min-height: 100%;
 }
 
+images {
+font-style: italic;
+
+}
+
+
 #confidence-booster {
   -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;
   -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
@@ -151,6 +157,7 @@ h1{
   color: #ccc;
 }
 /* display: flex;
+
   flex-direction: row;
   color: white;
   background-color: teal;

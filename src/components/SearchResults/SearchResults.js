@@ -210,7 +210,6 @@ class SearchResults extends React.Component {
               height: "55vh",
               backgroundImage: "url('/Images/Love.jpg')",
               backgroundSize: "100% 100%"
-
             }}
             onClick={this.handleLoveClick}
           >
