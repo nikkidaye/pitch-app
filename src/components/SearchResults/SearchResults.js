@@ -258,12 +258,14 @@ class SearchResults extends React.Component {
                 color="white"
                 className={useStyles.imageTitle}
               >
+
                 Make Me Laugh
                 <span className={useStyles.imageMarked} />
               </Typography>
             </span>
           </ButtonBase>
         </div>
+
 
         <div className={useStyles.root}>
           <GridList cellHeight={160} className={useStyles.gridList} cols={5}>
