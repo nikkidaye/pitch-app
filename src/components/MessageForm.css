@@ -13,10 +13,11 @@
   margin: 1px 1px 1px 0;
 }
 
-.MessageForm input, .MessageForm button {
-  background: #fff;
+.MessageForm input,
+.MessageForm button {
+  background: lightgreen;
   border-radius: 3px;
-  border: 1px solid #ccc;
+  border: 1px solid green;
   box-sizing: border-box;
   font-size: inherit;
   height: 100%;

@@ -42,7 +42,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function ClickAway() {
   const [open, setOpen] = React.useState(false);
-  const classes = useStyles();
 
   const handleClick = () => {
     setOpen(prev => !prev);
@@ -52,10 +51,10 @@ export default function ClickAway() {
     setOpen(false);
   };
 
-  const fake = <div className={classes.fake} />;
+  const fake = <div className={useStyles.fake} />;
 
   return (
-    <div className={classes.root} id="NavBar">
+    <div className={useStyles.root} id="NavBar">
       <ClickAwayListener onClickAway={handleClickAway}>
         <div>
           <Button id="openbutt" onClick={handleClick}>
@@ -63,13 +62,13 @@ export default function ClickAway() {
           </Button>
 
           {open ? (
-            <Paper className={classes.paper}>
+            <Paper className={useStyles.paper}>
               {fake}
-              <a href="/newuser">New User</a>
+              <a href="/newuser">Home</a>
               {fake}
-              <a href="/main">Visual Therapy</a>
+              <a href="/main">Categories</a>
               {fake}
-              <a href="/music">Phono Therapy</a>
+              <a href="/chat">Live Therapy Session</a>
               {fake}
               <a href="/contact">Contact Us</a>
             </Paper>

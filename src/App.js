@@ -55,7 +55,7 @@ class App extends React.Component {
         <Route path="/newuser" component={NewUser} />
         <Route path="/main" component={SearchResults} />
         <Route path="/contact" component={Contact} />
-        <Chat />
+        <Route path="/chat" component={Chat} />
         <Footer />
       </div>
     );
