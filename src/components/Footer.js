@@ -5,12 +5,8 @@ class Footer extends React.Component {
     return (
       <div className="footercontainer">
         <div classname="footer-logos" />
-        <p>
-          Suicide Prevention Hotline: 1-800-273-8255 Mental Health PTSD Hotline:
-          1-844-395-1271
-        </p>
-        <p>Keep Showing Up LLC</p>
-        <p>2019</p>
+        <p>Suicide Prevention Hotline: 1-800-273-8255</p>
+        <p>Keep Showing Up 2019</p>
       </div>
     );
   }

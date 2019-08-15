@@ -3,32 +3,25 @@
 }
 
 #NavBar {
-  background-color: #26c6da;
-  font-style: italic;
-  font: Libre Caslon Text;
-  font-weight: bold;
-<<<<<<< HEAD
-  font-size: 15pt;
-  font-family: 'Libre Caslon Text', serif;
-=======
+  background-color: white;
+  font-weight: normal;
   font-size: 16pt;
-  font-family: "Libre Caslon Text", serif;
->>>>>>> 974472584c37ab336c48fbd4a0cff2e94c78fb02
+  font-family: 'Titillium Web', sans-serif;
 }
 #welcome {
-  font-family: "Satisfy", cursive;
+  font-family: 'Titillium Web', sans-serif;
   font: Satisfy;
   display: inline-inline-block;
   font-size: 60pt;
   color: white;
 }
 #openbutt {
-  background-color: #26c6da;
+  background-color: white;
   border-style: dotted;
   border-color: black;
-  color: white;
+  color: rgb(71, 0, 71);
   font-size: 15pt;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Titillium Web', sans-serif;
 
 }
 #video-bg {
@@ -54,6 +47,7 @@
 #position {
   position: relative;
   z-index: 100;
+  border-color: white;
 }
 
 #makemewhite {
@@ -68,11 +62,13 @@ box {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 .footercontainer {
-  font-style: italic;
-  font-size: 11pt;
+  font-style: normal;
+  font-size: 9pt;
+  display: fixed;
 }
 
 TextField {
@@ -94,9 +90,9 @@ TextField {
 }
 
 a {
-  color: #82E0AA;
+  color: rgb(71, 0, 71);
 text-decoration: none;
-font-size: 15pt;
+font-size: 14pt;
 background-color: white;
 display: fixed;
 z-index: 1000;
