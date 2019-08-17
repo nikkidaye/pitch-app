@@ -58,15 +58,17 @@ export default function ClickAway() {
       <ClickAwayListener onClickAway={handleClickAway}>
         <div>
           <Button id="openbutt" onClick={handleClick}>
-            Open menu
+            Menu
           </Button>
 
           {open ? (
             <Paper className={useStyles.paper}>
               {fake}
-              <a href="/newuser">Home</a>
+              <a href="/">Home</a>
               {fake}
-              <a href="/main">Categories</a>
+              <a href="/newuser">Become a Member</a>
+              {fake}
+              <a href="/main">Visual Therapy</a>
               {fake}
               <a href="/chat">Live Therapy Session</a>
               {fake}

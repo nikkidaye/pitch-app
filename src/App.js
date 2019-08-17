@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import NewUser from "./components/NewUser";
 import Footer from "./components/Footer";
 import Chat from "./components/Chat";
+import Home from "./components/Home";
 
 // const API_KEY = "duywYDviRp03Bk2OT6ZrkE0Ccl3ODlUA";
 
@@ -46,8 +47,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
-        <Route exact path="/" component={NewUser} />
-      
+        <Route exact path="/" component={Home} />
         <Route path="/newuser" component={NewUser} />
         <Route path="/main" component={SearchResults} />
         <Route path="/contact" component={Contact} />

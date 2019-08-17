@@ -12,7 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 import '../App.css';
-import Video from '../sunset.mp4'
+// import Video from '../sunset.mp4'
 
 
 const useStyles = makeStyles(theme => ({
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+	alignItems: 'center',
   },
   avatar: {
     margin: theme.spacing(1),
@@ -29,7 +29,6 @@ const useStyles = makeStyles(theme => ({
   form: {
     width: '100%', // Fix IE 11 issue.
 	marginTop: theme.spacing(3),
-	borderColor: "white",
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
@@ -86,13 +85,13 @@ class NewUser extends React.Component {
 	render() {
 
 	  return (
-      <div>
-        <video id="video-bg" autoPlay loop muted>
-          <source id={useStyles.clouds} src= { Video } type="video/mp4"></source>
-          Your browser does not support the video tag.
-        </video>
+    //   <div>
+    //     <video id="video-bg" autoPlay loop muted>
+    //       <source id={useStyles.clouds} src= { Video } type="video/mp4"></source>
+    //       Your browser does not support the video tag.
+    //     </video>
 
-    <canvas id="myCanvas"></canvas>
+    // <canvas id="myCanvas"></canvas>
 
 
 	    <Container component="main" maxWidth="xs" id="position">
@@ -168,7 +167,7 @@ class NewUser extends React.Component {
 	          >
 	            Sign Up
 	          </Button>
-	          <Grid container justify="flex-end">
+	          <Grid container justify="flex-end"> 
 	            <Grid item>
 	              <Link href="/signin" variant="body2">
 	                Already have an account? Sign in
@@ -179,7 +178,7 @@ class NewUser extends React.Component {
 	      </div>
       </div>
 	    </Container>
-    </div>
+    // </div>
 	  )};
 }
 
