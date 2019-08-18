@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
@@ -37,7 +42,13 @@ const useStyles = makeStyles(theme => ({
     "&:nth-child(2n)": {
       marginRight: theme.spacing(3)
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
   }
+
+
 }));
 
 export default function ClickAway() {
@@ -79,43 +90,3 @@ export default function ClickAway() {
   );
 }
 
-//
-//
-//
-//
-//
-//     export default function SimpleMenu() {
-//          const [anchorEl, setAnchorEl] = React.useState(null);
-//
-//          function handleClick(event) {
-//            setAnchorEl(event.currentTarget);
-//          }
-//
-//          function handleClose() {
-//            setAnchorEl(null);
-//          }
-//
-//          return (
-//            <div>
-//              <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} >
-//                Open Menu
-//              </Button>
-//              <Menu
-//                id="simple-menu"
-//                anchorEl={anchorEl}
-//                keepMounted
-//                open={Boolean(anchorEl)}
-//                onClose={handleClose}
-//                ></Menu>
-//
-//
-//
-//                <MenuItem onClick={handleClose} >Sign Up</MenuItem>
-//                <MenuItem onClick={handleClose} >Contact Us</MenuItem>
-//                <MenuItem onClick={handleClose} >Sign In</MenuItem>
-//                <MenuItem onClick={handleClose} >Image Therapy</MenuItem>
-//               <MenuItem onClick={handleClose} >Music Therapy</MenuItem>
-//            </div>
-//
-// );
-//         }

@@ -1,164 +1,75 @@
-import React from "react";
-import ReactDOM from "react-dom";
-const nineThirtySix = "src/components/THE GOD FREQUENCY Remove Self Limiting Beliefs 963 Hz Kundalini Energy.mp3";
-const sevenFourOne = "./sevenFortyOne.mp3";
-const fiveTwoEight = "https://www.youtube.com/watch?v=zsHJHcGCGU8";
-const fourSeventeen = "https://www.youtube.com/watch?v=I_FpVaV1pHc";
-const confidence = "https://www.youtube.com/watch?v=PZv5iNxjYpU";
-const brainPower = "https://www.youtube.com/watch?v=b_DcQHbJIfE";
-const enhance = "https://www.youtube.com/watch?v=b_DcQHbJIfE&list=RDb_DcQHbJIfE&start_radio=1&t=5";
-const cleanseEnergy = "https://www.youtube.com/watch?v=EBbA1TVHVXs&list=RDb_DcQHbJIfE&index=2";
-const bobEnergy = "https://www.youtube.com/watch?v=lxbqeQf6O-k&list=PLs5G32duA1WEfB6ncURivjUMpDxKODFaZ";
+
+import React from 'react';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import SkipNextIcon from '@material-ui/icons/SkipNext';
 
 
 
+const useStyles = makeStyles(theme => ({
+  card: {
+    display: 'flex',
+  },
+  details: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  content: {
+    flex: '1 0 auto',
+  },
+  cover: {
+    width: 151,
+  },
+  controls: {
+    display: 'flex',
+    alignItems: 'center',
+    paddingLeft: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
+  },
+  playIcon: {
+    height: 38,
+    width: 38,
+  },
+}));
 
+export default function MediaControlCard() {
+  const classes = useStyles();
+  const theme = useTheme();
 
-function getTime(time) {
-  if (!isNaN(time)) {
-    return (
-      Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
-    );
-  }
-}
-
-class Music extends React.Component {
-  state = {
-    selectedTrack: null,
-    player: "stopped",
-    currentTime: null,
-    duration: null
-  };
-
-  componentDidMount() {
-    this.player.addEventListener("timeupdate", e => {
-      this.setState({
-        currentTime: e.target.currentTime,
-        duration: e.target.duration
-      });
-    });
-  }
-
-  componentWillUnmount() {
-    this.player.removeEventListener("timeupdate", () => {});
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.selectedTrack !== prevState.selectedTrack) {
-      let track;
-      switch (this.state.selectedTrack) {
-        case "sevenFourOne":
-          track = sevenFourOne;
-          break;
-        case "nineThirtySix":
-          track = nineThirtySix;
-          break;
-          case "fiveTwoEight":
-            track = fiveTwoEight;
-            break;
-            case "fourSeventeen":
-              track = fourSeventeen;
-              break;
-            case "confidence":
-                track = confidence;
-                break;
-            case "brainPower":
-                  track = brainPower;
-                break;
-            case "enhance":
-                  track = enhance;
-            break;
-            case "cleanseEnergy":
-              track = cleanseEnergy;
-              break;
-              case "bobEnergy":
-                track = bobEnergy;
-                break;
-        default:
-          break;
-      }
-      if (track) {
-        this.player.src = track;
-        this.player.play();
-        this.setState({ player: "playing", duration: this.player.duration });
-      }
-    }
-    if (this.state.player !== prevState.player) {
-      if (this.state.player === "paused") {
-        this.player.pause();
-      } else if (this.state.player === "stopped") {
-        this.player.pause();
-        this.player.currentTime = 0;
-        this.setState({ selectedTrack: null });
-      } else if (
-        this.state.player === "playing" &&
-        prevState.player === "paused"
-      ) {
-        this.player.play();
-      }
-    }
-  }
-
-  render() {
-    const list = [
-      { id: 1, title: "sevenFourOne" },
-      { id: 2, title: "nineThirtySix" },
-      { id: 3, title: "fiveTwoEight" },
-      { id: 4, title: "fourSeventeen"},
-      { id: 5, title: "confidence"},
-      { id: 6, title: "brainPower"},
-      { id: 7, title: "enhance" },
-      { id: 8, title: "cleanseEnergy"},
-      { id: 9, title: "bobEnergy" },
-
-    ].map(item => {
-      return (
-        <li
-          key={item.id}
-          onClick={() => this.setState({ selectedTrack: item.title })}
-        >
-          {item.title}
-        </li>
-      );
-    });
-
-    const currentTime = getTime(this.state.currentTime);
-    const duration = getTime(this.state.duration);
-
-    return (
-      <div>
-        <h2>Music Therapy!</h2>
-        <ul>{list}</ul>
-        <div>
-          {this.state.player === "paused" && (
-            <button onClick={() => this.setState({ player: "playing" })}>
-              Play
-            </button>
-          )}
-          {this.state.player === "playing" && (
-            <button onClick={() => this.setState({ player: "paused" })}>
-              Pause
-            </button>
-          )}
-          {this.state.player === "playing" || this.state.player === "paused" ? (
-            <button onClick={() => this.setState({ player: "stopped" })}>
-              Stop
-            </button>
-          ) : (
-            ""
-          )}
+  return (
+    <Card className={classes.card}>
+      <div className={classes.details}>
+        <CardContent className={classes.content}>
+          <Typography component="h5" variant="h5">
+            Live From Space
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            Mac Miller
+          </Typography>
+        </CardContent>
+        <div className={classes.controls}>
+          <IconButton aria-label="previous">
+            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
+          </IconButton>
+          <IconButton aria-label="play/pause">
+            <PlayArrowIcon className={classes.playIcon} />
+          </IconButton>
+          <IconButton aria-label="next">
+            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
+          </IconButton>
         </div>
-        {this.state.player === "playing" || this.state.player === "paused" ? (
-          <div>
-            {currentTime} / {duration}
-          </div>
-        ) : (
-          ""
-        )}
-        <audio ref={ref => (this.player = ref)} />
       </div>
-    );
-  }
+      <CardMedia
+        className={classes.cover}
+        image="/static/images/cards/live-from-space.jpg"
+        title="Live from space album cover"
+      />
+    </Card>
+  );
 }
-
-export default Music;
