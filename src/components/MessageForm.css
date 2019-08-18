@@ -1,4 +1,4 @@
-.MessageForm {
+ .MessageForm {
   display: flex;
   background: #ccc;
 }
@@ -15,9 +15,9 @@
 
 .MessageForm input,
 .MessageForm button {
-  background: lightgreen;
+  background: rgb(181, 226, 181);
   border-radius: 3px;
-  border: 1px solid green;
+  border: 1px solid rgb(0, 80, 0);
   box-sizing: border-box;
   font-size: inherit;
   height: 100%;
