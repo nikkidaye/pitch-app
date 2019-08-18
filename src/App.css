@@ -52,6 +52,15 @@ font-family: 'Libre Caslon Text', serif;
 }
 
 #NavBar {
+<<<<<<< HEAD
+  background-color: white;
+  font-weight: normal;
+  font-size: 16pt;
+  font-family: 'Titillium Web', sans-serif;
+}
+#welcome {
+  font-family: 'Titillium Web', sans-serif;
+=======
   background-color: #26c6da;
   font-style: italic;
   font: Libre Caslon Text;
@@ -65,17 +74,27 @@ font-family: 'Libre Caslon Text', serif;
 #welcome {
   font-family: "Satisfy", cursive;
 
+>>>>>>> master
   font: Satisfy;
   display: inline-inline-block;
   font-size: 60pt;
   color: white;
 }
 #openbutt {
+<<<<<<< HEAD
+  background-color: white;
+  border-style: dotted;
+  border-color: black;
+  color: rgb(71, 0, 71);
+  font-size: 15pt;
+  font-family: 'Titillium Web', sans-serif;
+=======
 
   background-color: blueGrey[900];
   font-family: 'Lobster Two', cursive;
   font-size: 15pt;
   color: white;
+>>>>>>> master
 
 }
 
@@ -104,6 +123,7 @@ font-family: 'Libre Caslon Text', serif;
 #position {
   position: relative;
   z-index: 100;
+  border-color: white;
 }
 
 #makemewhite {
@@ -118,11 +138,13 @@ box {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 .footercontainer {
-  font-style: italic;
-  font-size: 11pt;
+  font-style: normal;
+  font-size: 9pt;
+  display: fixed;
 }
 
 TextField {
@@ -132,7 +154,7 @@ TextField {
     "stylesheet" >;
 }
 #contact{
-  font-color: white;
+  color: white;
   font-family: 'Gochi Hand', cursive;
 }
 
@@ -144,9 +166,9 @@ TextField {
 }
 
 a {
-  color: #82E0AA;
+  color: rgb(71, 0, 71);
 text-decoration: none;
-font-size: 15pt;
+font-size: 14pt;
 background-color: white;
 display: fixed;
 z-index: 1000;
