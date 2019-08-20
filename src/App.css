@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+html {
+  background-image: url("/Images/background.png");
+    min-height: 380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
 #center{
   display: flex;
   align-items: center;
@@ -52,7 +61,6 @@ font-family: 'Libre Caslon Text', serif;
 }
 
 #NavBar {
-<<<<<<< HEAD
   background-color: white;
   font-weight: normal;
   font-size: 16pt;
@@ -60,42 +68,21 @@ font-family: 'Libre Caslon Text', serif;
 }
 #welcome {
   font-family: 'Titillium Web', sans-serif;
-=======
-  background-color: #26c6da;
-  font-style: italic;
-  font: Libre Caslon Text;
-  font-weight: bold;
-
-  font-size: 10pt;
-  font-family: 'Libre Caslon Text', serif;
-  padding: none;
-
-
-#welcome {
-  font-family: "Satisfy", cursive;
-
->>>>>>> master
   font: Satisfy;
   display: inline-inline-block;
   font-size: 60pt;
   color: white;
 }
 #openbutt {
-<<<<<<< HEAD
-  background-color: white;
+  /* background-color: white;
   border-style: dotted;
   border-color: black;
   color: rgb(71, 0, 71);
   font-size: 15pt;
-  font-family: 'Titillium Web', sans-serif;
-=======
-
-  background-color: blueGrey[900];
-  font-family: 'Lobster Two', cursive;
-  font-size: 15pt;
-  color: white;
->>>>>>> master
-
+  font-family: 'Titillium Web', sans-serif; */
+ 
+text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+color: #FFFFFF;
 }
 
 
@@ -164,6 +151,52 @@ TextField {
   border-style: solid;
   border-color: #D7BDE2;
 }
+
+.homelogo {
+  text-shadow: 0 0 10px #FFFFFF;
+  color: #FFFFFF;
+}
+
+/* .jumbotron {
+  z-index: -100;
+  margin-top: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+} */
+
+/* .backgroundpic {
+  background-image: url("/Images/background.png");
+  min-height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+} */
+
+.homebutton {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #34d9cb;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+   display: grid;
+   
+  }
+  
+  .butn:hover {
+    background: #3cfae1;
+    text-decoration: none;
+  }
 
 a {
   color: rgb(71, 0, 71);

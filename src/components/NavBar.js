@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> master
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
@@ -42,10 +37,6 @@ const useStyles = makeStyles(theme => ({
     "&:nth-child(2n)": {
       marginRight: theme.spacing(3)
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> master
   }
 
 
