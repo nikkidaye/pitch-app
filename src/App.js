@@ -47,7 +47,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <NavBar />
+        <NavBar style={{backgroundColor: "transparent"}}/>
         <Route exact path="/" component={Home} />
         <Route path="/newuser" component={NewUser} />
         <Route path="/main" component={SearchResults} />

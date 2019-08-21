@@ -92,7 +92,7 @@ class NewUser extends React.Component {
 
     // <canvas id="myCanvas"></canvas>
 
-
+		<div className="newuserbg">
 	    <Container component="main" maxWidth="xs" id="position">
 	      <CssBaseline />
 	      <div className={useStyles.paper} id="position">
@@ -162,7 +162,8 @@ class NewUser extends React.Component {
 	            variant="contained"
 	            color="primary"
 	            className={useStyles.submit}
-              onClick={this.handleSubmit}
+			  onClick={this.handleSubmit}
+			  id="signup"
 	          >
 	            Sign Up
 	          </Button>
