@@ -61,7 +61,7 @@ const useStyles = makeStyles(theme => ({
     "&:hover, &$focusVisible": {
       zIndex: 1,
       "& $imageBackdrop": {
-        opacity: 0.15
+        opacity: 0.01
       },
       "& $imageMarked": {
         opacity: 0
@@ -162,7 +162,7 @@ class SearchResults extends React.Component {
       <div className="mainpage">
         <div>
           {this.state.title === "" ? (
-            <h1 stlye={{color: "white"}}> Choose a Category </h1>
+            <h1 id="maintitle"> Choose a Category </h1>
           ) : (
             <p>{this.state.title}</p>
           )}
@@ -194,6 +194,7 @@ class SearchResults extends React.Component {
                 variant="subtitle1"
                 color="white"
                 className={useStyles.imageTitle}
+                id="confidencetitle"
               >
                 Confidence Booster
                 <span className={useStyles.imageMarked} />
@@ -226,6 +227,7 @@ class SearchResults extends React.Component {
                 variant="subtitle1"
                 color="white"
                 className={useStyles.imageTitle}
+                id="lovetitle"
               >
                 Love
                 <span className={useStyles.imageMarked} />
@@ -257,6 +259,7 @@ class SearchResults extends React.Component {
                 variant="subtitle1"
                 color="white"
                 className={useStyles.imageTitle}
+                id="laughtitle"
               >
 
                 Make Me Laugh

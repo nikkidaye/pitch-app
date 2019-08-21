@@ -12,12 +12,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 import '../App.css';
-<<<<<<< HEAD
-import Video from '../sunset.mp4'
-import {grey} from '@material-ui/core/colors';
-=======
 // import Video from '../sunset.mp4'
->>>>>>> 592c9e653946d9c6078d1dc3eb4ef99ebe5e3e3f
+import {grey} from '@material-ui/core/colors';
 
 
 const useStyles = makeStyles(theme => ({
@@ -96,7 +92,7 @@ class NewUser extends React.Component {
 
     // <canvas id="myCanvas"></canvas>
 
-
+		<div className="newuserbg">
 	    <Container component="main" maxWidth="xs" id="position">
 	      <CssBaseline />
 	      <div className={useStyles.paper} id="position">
@@ -166,7 +162,8 @@ class NewUser extends React.Component {
 	            variant="contained"
 	            color="primary"
 	            className={useStyles.submit}
-              onClick={this.handleSubmit}
+			  onClick={this.handleSubmit}
+			  id="signup"
 	          >
 	            Sign Up
 	          </Button>

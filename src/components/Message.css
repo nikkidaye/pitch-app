@@ -1,7 +1,7 @@
 .Message {
   line-height: 1.5em;
-  background-color: teal;
-  color: #ccc;
+  background-color: transparent;
+  color: rgb(92, 3, 92);
 }
 
 .Message.log {
@@ -19,5 +19,5 @@
 }
 
 .green {
-  color: darkblue !important;
+  color: rgb(9, 9, 138) !important;
 }

@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+html {
+  background-image: url("/Images/background.png");
+    min-height: 380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
 #center{
   display: flex;
   align-items: center;
@@ -52,52 +61,54 @@ font-family: 'Libre Caslon Text', serif;
 }
 
 #NavBar {
-<<<<<<< HEAD
-  background-color: white;
+  background-color: transparent;
   font-weight: normal;
   font-size: 16pt;
   font-family: 'Titillium Web', sans-serif;
+
 }
 #welcome {
   font-family: 'Titillium Web', sans-serif;
-=======
-  background-color: #26c6da;
-  font-style: italic;
-  font: Libre Caslon Text;
-  font-weight: bold;
-
-  font-size: 10pt;
-  font-family: 'Libre Caslon Text', serif;
-  padding: none;
-
-
-#welcome {
-  font-family: "Satisfy", cursive;
-
->>>>>>> master
   font: Satisfy;
   display: inline-inline-block;
-  font-size: 60pt;
-  color: white;
+  font-size: 33pt;
+  color: rgb(235, 206, 235)
+}
+#signup {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  background: #34d9cb;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  position: relative;
 }
 #openbutt {
-<<<<<<< HEAD
-  background-color: white;
-  border-style: dotted;
-  border-color: black;
-  color: rgb(71, 0, 71);
-  font-size: 15pt;
-  font-family: 'Titillium Web', sans-serif;
-=======
-
-  background-color: blueGrey[900];
-  font-family: 'Lobster Two', cursive;
-  font-size: 15pt;
-  color: white;
->>>>>>> master
-
+    background-color: transparent;
+    color: purple;
 }
 
+.opennav {
+  background-color: lavender;
+}
+
+.newuserbg {
+  background-image: url("/Images/background.png");
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  margin-top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  z-index: -100;
+
+}
 
 #video-bg {
   z-index: -100;
@@ -111,7 +122,6 @@ font-family: 'Libre Caslon Text', serif;
   display: flex;
   align-items: center;
 }
-
 .button {
   background-color: pink;
 }
@@ -126,12 +136,16 @@ font-family: 'Libre Caslon Text', serif;
   border-color: white;
 }
 
+#homediv {
+  height: 100%;
+}
+
 #makemewhite {
   border-color: white;
   color: white;
 }
 
-box {
+/* box {
   position: relative;
   height: 100vh;
   text-align: center;
@@ -139,12 +153,15 @@ box {
   align-items: center;
   justify-content: center;
   color: white;
-}
+} */
 
 .footercontainer {
   font-style: normal;
-  font-size: 9pt;
-  display: fixed;
+  color: white;
+  font-size: 6pt;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
 TextField {
@@ -155,21 +172,103 @@ TextField {
 }
 #contact{
   color: white;
-  font-family: 'Gochi Hand', cursive;
+  font-family: 'Titillium Web', sans-serif;
+  font: Satisfy;
+  display: inline-inline-block;
+  font-size: 33pt;
+  color: purple;
 }
 
 .contact {
 
   border-width: thick;
   border-style: solid;
-  border-color: #D7BDE2;
+  border-color: rgb(218, 210, 221);
 }
 
+#sendbutton {
+  -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #34d9cb;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    position: relative;
+}
+.homelogo {
+  text-shadow: 0 0 10px #FFFFFF;
+  color: #FFFFFF;
+}
+
+/* .jumbotron {
+  z-index: -100;
+  margin-top: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+} */
+
+/* .backgroundpic {
+  background-image: url("/Images/background.png");
+  min-height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+} */
+
+.title {
+  font-family: 'Titillium Web', sans-serif;
+  font: Satisfy;
+  display: inline-inline-block;
+  text-indent: 1em;
+  font-size: 44pt;
+  color: rgb(235, 206, 235);
+  
+}
+
+.slogan {
+  font-size: 14pt;
+  color: white;
+
+}
+.homebttn {
+  position: relative;
+  justify-content: center;
+
+}
+
+.homebutton {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #34d9cb;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .butn:hover {
+    background: #3cfae1;
+    text-decoration: none;
+  }
+
 a {
-  color: rgb(71, 0, 71);
-text-decoration: none;
-font-size: 14pt;
-background-color: white;
-display: fixed;
-z-index: 1000;
+  background-color: transparent;
+  /* color: rgb(71, 0, 71); */
+  text-decoration: none;
+  font-size: 11pt;
+  /* display: fixed; */
+  /* z-index: 1000; */
 }
