@@ -12,7 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 import '../App.css';
-import Video from '../sunset.mp4'
+// import Video from '../sunset.mp4'
 import {grey} from '@material-ui/core/colors';
 
 
@@ -22,12 +22,12 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+	alignItems: 'center',
   },
 
   form: {
     width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(3),
+	marginTop: theme.spacing(3),
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
@@ -84,15 +84,15 @@ class NewUser extends React.Component {
 	render() {
 
 	  return (
-      <div>
-        <video id="video-bg" autoPlay loop muted>
-          <source id={useStyles.clouds} src= { Video } type="video/mp4"></source>
-          Your browser does not support the video tag.
-        </video>
+    //   <div>
+    //     <video id="video-bg" autoPlay loop muted>
+    //       <source id={useStyles.clouds} src= { Video } type="video/mp4"></source>
+    //       Your browser does not support the video tag.
+    //     </video>
 
-    <canvas id="myCanvas"></canvas>
+    // <canvas id="myCanvas"></canvas>
 
-
+		<div className="newuserbg">
 	    <Container component="main" maxWidth="xs" id="position">
 	      <CssBaseline />
 	      <div className={useStyles.paper} id="position">
@@ -162,11 +162,12 @@ class NewUser extends React.Component {
 	            variant="contained"
 	            color="primary"
 	            className={useStyles.submit}
-              onClick={this.handleSubmit}
+			  onClick={this.handleSubmit}
+			  id="signup"
 	          >
 	            Sign Up
 	          </Button>
-	          <Grid container justify="flex-end">
+	          <Grid container justify="flex-end"> 
 	            <Grid item>
 	              <Link href="/signin" variant="body2">
 	                Already have an account? Sign in
@@ -177,7 +178,7 @@ class NewUser extends React.Component {
 	      </div>
       </div>
 	    </Container>
-    </div>
+    // </div>
 	  )};
 }
 

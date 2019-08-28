@@ -48,7 +48,7 @@ class Contact extends React.Component {
             <Input id="email" multiline rows={10} />
           </FormControl>
 
-          <Button  onClick={this.myClick} type="submit" href="/main" variant="contained" color="primary" size="medium">
+          <Button  onClick={this.myClick} type="submit" href="/main" variant="contained" color="primary" size="medium" id="sendbutton">
             Send
           </Button>
 

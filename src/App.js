@@ -2,15 +2,19 @@ import React from "react";
 import { Route } from "react-router-dom";
 import axios from "axios";
 import Contact from "./components/Contact";
-
 import SearchResults from "./components/SearchResults/SearchResults";
 import NavBar from "./components/NavBar";
 import NewUser from "./components/NewUser";
-
 import TipsComponent from "./components/TipsComponent";
+<<<<<<< HEAD
 
 import Footer from "./components/Footer";
 import Chat from "./components/Chat";
+=======
+import Footer from "./components/Footer";
+import Chat from "./components/Chat";
+import Home from "./components/Home";
+>>>>>>> bff5cf10fb9b34f656175d9ff3230b7b03b83d58
 
 // const API_KEY = "duywYDviRp03Bk2OT6ZrkE0Ccl3ODlUA";
 
@@ -49,8 +53,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <NavBar />
-        <Route exact path="/" component={NewUser} />
+        <NavBar style={{backgroundColor: "transparent"}}/>
+        <Route exact path="/" component={Home} />
         <Route path="/newuser" component={NewUser} />
         <Route path="/main" component={SearchResults} />
         <Route path="/contact" component={Contact} />

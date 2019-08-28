@@ -38,8 +38,8 @@ class Chat extends Component {
   render() {
     return (
       <div className="chatcontainer">
-        <h2>You are now live!</h2>
-        <h4>Type below to chat with a licensed therapist..</h4>
+        <h2 id="chattitle">You are now live!</h2>
+        <h4 id="chatmessage">Type below to chat with a licensed therapist..</h4>
         <div className="Chat">
           <MessageList
             messages={this.state.messages}
