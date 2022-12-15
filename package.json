@@ -24,7 +24,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "twilio": "^3.33.2",
-    "twilio-chat": "^3.3.1"
+    "twilio-chat": "^6.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
